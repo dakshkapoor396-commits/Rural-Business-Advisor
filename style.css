@@ -14,10 +14,10 @@
   --surface-color: #ffffff;
   --text-main: #0f172a;
   --text-muted: #64748b;
-  --primary: #15803d;
-  --primary-hover: #166534;
-  --border-color: #e2e8f0;
-  --accent: #f0fdf4;
+  --primary: #0f766e;
+  --primary-hover: #115e59;
+  --border-color: #dbe4ee;
+  --accent: #ecfeff;
 }
 
 
@@ -1356,6 +1356,27 @@ input::placeholder {
   font-size: 0.95rem;
   font-weight: 700;
   color: var(--text-main);
+}
+
+.scheme-status-active,
+.eligibility-yes {
+  color: #15803d;
+}
+
+.eligibility-no {
+  color: #b45309;
+}
+
+.scheme-source-link {
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-decoration: underline;
+}
+
+.scheme-select-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
 }
 
 .scheme-select-radio {
@@ -3416,5 +3437,403 @@ select {
   .btn-demo {
     width: 100%;
     min-height: 44px;
+  }
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.65rem;
+  border: 1px solid var(--border-color);
+  border-radius: 999px;
+  background: var(--bg-color);
+  color: var(--text-main);
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.theme-toggle:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.language-selector select {
+  min-height: 34px;
+  padding: 0.3rem 1.8rem 0.3rem 0.55rem;
+  border: 1px solid var(--border-color);
+  border-radius: 999px;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.language-selector select:focus-visible,
+.theme-toggle:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--primary) 35%, transparent);
+  outline-offset: 2px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ArthSetu's six-phase journey uses named milestones instead of screen numbers. */
+.stepper-track {
+  min-width: 720px;
+}
+
+.step-node {
+  min-width: 105px;
+  height: auto;
+  min-height: 3.2rem;
+  gap: 0.35rem;
+  padding: 0.45rem 0.5rem;
+  text-align: left;
+  justify-content: flex-start;
+}
+
+.phase-number {
+  display: inline-flex;
+  flex: 0 0 1.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: rgba(21, 128, 61, 0.12);
+  color: var(--primary);
+}
+
+.phase-label {
+  font-size: 0.68rem;
+  line-height: 1.15;
+}
+
+.step-node.active-node .phase-number {
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+.step-node.completed-node::after {
+  content: "";
+  margin: 0;
+}
+
+/* ============================================================
+   ARTHSETU DARK THEME
+   ============================================================ */
+
+:root[data-theme="dark"] {
+  --bg-color: #071827;
+  --surface-color: #10263a;
+  --text-main: #f1f5f9;
+  --text-muted: #b7c7d9;
+  --primary: #22c5bc;
+  --primary-hover: #5eead4;
+  --border-color: #29445a;
+  --accent: #0d3445;
+}
+
+:root[data-theme="dark"] body {
+  background-color: var(--bg-color);
+  color: var(--text-main);
+}
+
+:root[data-theme="dark"] .app-header,
+:root[data-theme="dark"] .feature-card,
+:root[data-theme="dark"] .form-section,
+:root[data-theme="dark"] .analysis-card,
+:root[data-theme="dark"] .indicator-card,
+:root[data-theme="dark"] .score-card,
+:root[data-theme="dark"] .split-detail-card,
+:root[data-theme="dark"] .report-card,
+:root[data-theme="dark"] .report-meta-card,
+:root[data-theme="dark"] .demo-preset-bar,
+:root[data-theme="dark"] .schedule-controls-bar,
+:root[data-theme="dark"] .table-responsive {
+  background-color: var(--surface-color);
+  border-color: var(--border-color);
+}
+
+:root[data-theme="dark"] input,
+:root[data-theme="dark"] select,
+:root[data-theme="dark"] textarea,
+:root[data-theme="dark"] .calculator-input,
+:root[data-theme="dark"] .btn-secondary,
+:root[data-theme="dark"] .btn-demo,
+:root[data-theme="dark"] .chip-btn,
+:root[data-theme="dark"] .view-toggle-btn,
+:root[data-theme="dark"] .step-node,
+:root[data-theme="dark"] .btn-reset {
+  background-color: #0b2032;
+  color: var(--text-main);
+  border-color: var(--border-color);
+}
+
+:root[data-theme="dark"] input::placeholder,
+:root[data-theme="dark"] textarea::placeholder {
+  color: #8ea5ba;
+}
+
+:root[data-theme="dark"] .btn-secondary:hover,
+:root[data-theme="dark"] .btn-demo:hover,
+:root[data-theme="dark"] .chip-btn:hover,
+:root[data-theme="dark"] .view-toggle-btn:hover,
+:root[data-theme="dark"] .btn-reset:hover {
+  background-color: #17354b;
+  color: var(--primary-hover);
+}
+
+:root[data-theme="dark"] .step-node.completed-node,
+:root[data-theme="dark"] .tier-high .status-badge {
+  background-color: #123c3b;
+  color: #8af5e7;
+  border-color: #247b78;
+}
+
+:root[data-theme="dark"] .step-node.active-node,
+:root[data-theme="dark"] .btn-primary {
+  background-color: var(--primary);
+  color: #042026;
+  border-color: var(--primary);
+}
+
+:root[data-theme="dark"] .btn-primary:hover {
+  background-color: var(--primary-hover);
+}
+
+:root[data-theme="dark"] .analysis-icon,
+:root[data-theme="dark"] .metric-pill,
+:root[data-theme="dark"] .value-prop-card,
+:root[data-theme="dark"] .mitigation-box,
+:root[data-theme="dark"] .advisory-callout {
+  background-color: #0b2032;
+  border-color: var(--border-color);
+}
+
+:root[data-theme="dark"] table th {
+  background-color: #17354b;
+  color: var(--text-main);
+}
+
+:root[data-theme="dark"] table td,
+:root[data-theme="dark"] table th,
+:root[data-theme="dark"] .detail-divider {
+  border-color: var(--border-color);
+}
+
+@media (max-width: 560px) {
+  .header-actions {
+    gap: 0.4rem;
+  }
+
+  .theme-toggle-label {
+    display: none;
+  }
+
+  .theme-toggle {
+    padding: 0.4rem 0.55rem;
+  }
+}
+
+/* ============================================================
+   RESPONSIVE FOUNDATION — ALL DEVICE SIZES
+   ============================================================ */
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.app-container {
+  width: min(100% - 2rem, 900px);
+  padding-inline: clamp(0.75rem, 2vw, 1.5rem);
+}
+
+.header-inner,
+.step-screen,
+.form-grid > *,
+.features-grid > *,
+.indicators-grid > *,
+.analysis-grid > *,
+.swot-grid > *,
+.report-grid-duo > *,
+.digest-grid > *,
+.financial-summary-grid > * {
+  min-width: 0;
+}
+
+input,
+select,
+textarea,
+button {
+  max-width: 100%;
+}
+
+input,
+select,
+textarea {
+  min-height: 44px;
+}
+
+.table-responsive {
+  max-width: 100%;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  -webkit-overflow-scrolling: touch;
+}
+
+.amortization-table {
+  min-width: 620px;
+}
+
+@media (max-width: 1024px) {
+  .app-header {
+    padding-inline: clamp(0.75rem, 3vw, 1.5rem);
+  }
+
+  .app-container {
+    width: min(100% - 1.5rem, 900px);
+  }
+}
+
+@media (max-width: 767px) {
+  .header-brand-row {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .header-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .features-grid,
+  .financial-summary-grid,
+  .indicators-grid,
+  .analysis-grid,
+  .swot-grid,
+  .report-grid-duo,
+  .digest-grid,
+  .pills-grid,
+  .checklist-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .form-grid,
+  .scheme-specs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .report-meta-header,
+  .schedule-meta-summary,
+  .control-label-row {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .report-id-box,
+  .view-toggle-group {
+    width: 100%;
+  }
+
+  .view-toggle-btn {
+    flex: 1 1 0;
+  }
+
+  .stepper-track {
+    min-width: 690px;
+  }
+
+  .step-node {
+    min-width: 108px;
+    width: auto;
+    height: auto;
+    min-height: 44px;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-container {
+    width: 100%;
+    padding-inline: 0.75rem;
+  }
+
+  .header-actions {
+    align-items: center;
+  }
+
+  .stepper-track {
+    min-width: 330px;
+    width: max-content;
+  }
+
+  .step-node {
+    width: 48px;
+    min-width: 48px;
+    min-height: 48px;
+    justify-content: center;
+    padding: 0.35rem;
+  }
+
+  .phase-label {
+    display: none;
+  }
+
+  .phase-number {
+    flex-basis: 1.7rem;
+    width: 1.7rem;
+    height: 1.7rem;
+  }
+
+  .form-section,
+  .feature-card,
+  .analysis-card,
+  .report-card,
+  .report-meta-card,
+  .report-summary-card {
+    padding: clamp(0.85rem, 4vw, 1rem);
+  }
+
+  .nav-actions,
+  .report-bottom-nav,
+  .report-primary-actions {
+    width: 100%;
+  }
+
+  .nav-actions .btn,
+  .report-bottom-nav .btn,
+  .report-primary-actions .btn {
+    width: 100%;
+    min-height: 46px;
+  }
+
+  .table-responsive {
+    margin-inline: -0.75rem;
+    width: calc(100% + 1.5rem);
+    border-radius: 0;
   }
 }
