@@ -10,9 +10,21 @@
     content="width=device-width, initial-scale=1.0"
   />
 
-  <title>Rural Business Advisor</title>
+  <title>ArthSetu | Rural Business Feasibility</title>
 
   <link rel="stylesheet" href="style.css" />
+
+  <script>
+    try {
+      if (localStorage.getItem("arthsetu-theme") === "dark") {
+        document.documentElement.dataset.theme = "dark";
+      }
+      if (localStorage.getItem("arthsetu-language") === "hi") {
+        document.documentElement.lang = "hi";
+        document.documentElement.dataset.language = "hi";
+      }
+    } catch (error) {}
+  </script>
 
 </head>
 
@@ -33,23 +45,42 @@
         <div>
 
           <h1 class="brand-title">
-            Rural Business Advisor
+            ArthSetu
           </h1>
 
           <p class="brand-tagline">
-            De-risking rural micro-enterprises before capital deployment
+            From local business idea to a loan-ready feasibility report
           </p>
 
         </div>
 
 
-        <!-- STEP COUNTER -->
+        <div class="header-actions">
+          <label class="language-selector no-print" for="language-toggle">
+            <span class="visually-hidden">Choose language</span>
+            <select id="language-toggle" aria-label="Choose language">
+              <option value="en">English</option>
+              <option value="hi">हिंदी</option>
+            </select>
+          </label>
 
-        <div
-          id="step-counter-badge"
-          class="step-counter-badge"
-        >
-          Step 1 of 14
+          <div
+            id="step-counter-badge"
+            class="step-counter-badge"
+          >
+            Phase 1 of 6
+          </div>
+
+          <button
+            id="theme-toggle"
+            class="theme-toggle no-print"
+            type="button"
+            aria-label="Switch to dark mode"
+            aria-pressed="false"
+          >
+            <span class="theme-toggle-icon" aria-hidden="true">🌙</span>
+            <span class="theme-toggle-label">Dark Mode</span>
+          </button>
         </div>
 
       </div>
@@ -71,114 +102,56 @@
 
           <li
             class="step-node active-node"
-            data-step="1"
-            title="Landing"
+            data-phase="1"
+            data-end-screen="2"
+            title="Business & User Information"
           >
-            1
+            <span class="phase-number">1</span><span class="phase-label">Business Input</span>
           </li>
 
           <li
             class="step-node"
-            data-step="2"
-            title="Profile Intake"
+            data-phase="2"
+            data-end-screen="3"
+            title="Business Feasibility Analysis"
           >
-            2
+            <span class="phase-number">2</span><span class="phase-label">Feasibility</span>
           </li>
 
           <li
             class="step-node"
-            data-step="3"
-            title="Feasibility Dashboard"
+            data-phase="3"
+            data-end-screen="6"
+            title="Hyper-Local Market Analysis"
           >
-            3
+            <span class="phase-number">3</span><span class="phase-label">Local Market</span>
           </li>
 
           <li
             class="step-node"
-            data-step="4"
-            title="Market Scope"
+            data-phase="4"
+            data-end-screen="9"
+            title="Risk & Opportunity Assessment"
           >
-            4
+            <span class="phase-number">4</span><span class="phase-label">Risk & Opportunity</span>
           </li>
 
           <li
             class="step-node"
-            data-step="5"
-            title="Opportunities"
+            data-phase="5"
+            data-end-screen="13"
+            title="Financial & Loan Structuring"
           >
-            5
+            <span class="phase-number">5</span><span class="phase-label">Finance & Loan</span>
           </li>
 
           <li
             class="step-node"
-            data-step="6"
-            title="Competitors"
+            data-phase="6"
+            data-end-screen="14"
+            title="Final Business Feasibility Report"
           >
-            6
-          </li>
-
-          <li
-            class="step-node"
-            data-step="7"
-            title="SWOT"
-          >
-            7
-          </li>
-
-          <li
-            class="step-node"
-            data-step="8"
-            title="Threats & Risks"
-          >
-            8
-          </li>
-
-          <li
-            class="step-node"
-            data-step="9"
-            title="Pricing & Value"
-          >
-            9
-          </li>
-
-          <li
-            class="step-node"
-            data-step="10"
-            title="Financial Calculator"
-          >
-            10
-          </li>
-
-          <li
-            class="step-node"
-            data-step="11"
-            title="Government Schemes"
-          >
-            11
-          </li>
-
-          <li
-            class="step-node"
-            data-step="12"
-            title="EMI Calculator"
-          >
-            12
-          </li>
-
-          <li
-            class="step-node"
-            data-step="13"
-            title="Amortization Schedule"
-          >
-            13
-          </li>
-
-          <li
-            class="step-node"
-            data-step="14"
-            title="Final Enterprise Report"
-          >
-            14
+            <span class="phase-number">6</span><span class="phase-label">Final Report</span>
           </li>
 
         </ol>
@@ -216,13 +189,12 @@
         </span>
 
         <h2 class="hero-title">
-          Validate Viability Before Taking Credit
+          Build a business plan that is viable before you borrow
         </h2>
 
         <p class="hero-desc">
-          Evaluate local demand, uncover hidden operational costs,
-          and stress-test repayment capability before committing
-          your savings or taking high-interest loans.
+          ArthSetu connects your local business idea, market reality,
+          risks and finances into one practical feasibility report.
         </p>
 
       </div>
@@ -238,12 +210,12 @@
           </div>
 
           <h3>
-            Viability Assessment
+            Business &amp; Feasibility
           </h3>
 
           <p>
-            Scan local demand, supply saturation, and footfall
-            density across your block or village.
+            Start with location, business type and available capital,
+            then receive a clear feasibility score.
           </p>
 
         </article>
@@ -256,12 +228,12 @@
           </div>
 
           <h3>
-            Market &amp; SWOT
+            Hyper-Local Market &amp; Risk
           </h3>
 
           <p>
-            Identify regulatory bottlenecks, seasonal shifts,
-            and direct local competition.
+            Assess 5–10 km reach, customer potential, competitors,
+            local pricing, opportunities and threats.
           </p>
 
         </article>
@@ -274,12 +246,12 @@
           </div>
 
           <h3>
-            Loan Structuring
+            Finance to Final Report
           </h3>
 
           <p>
-            Calibrate margin money requirements against realistic
-            monthly cash flow forecasts.
+            Structure project cost, margin contribution, loan, scheme,
+            EMI and a recommended action plan.
           </p>
 
         </article>
@@ -316,7 +288,7 @@
       <div class="screen-header">
 
         <span class="step-indicator">
-          Screen 2 of 14
+          Phase 1 of 6 · Business &amp; User Information
         </span>
 
         <h2>
@@ -572,7 +544,7 @@
       <div class="screen-header">
 
         <span class="step-indicator">
-          Screen 3 of 14
+          Phase 2 of 6 · Business Feasibility Analysis
         </span>
 
         <h2>
@@ -762,7 +734,7 @@
       <div class="screen-header">
 
         <span class="step-indicator">
-          Screen 4 of 14
+          Phase 3 of 6 · Hyper-Local Market Analysis
         </span>
 
         <h2>
@@ -898,7 +870,7 @@
       <div class="screen-header">
 
         <span class="step-indicator">
-          Screen 5 of 14
+          Phase 3 of 6 · Hyper-Local Market Analysis
         </span>
 
         <h2>
@@ -988,7 +960,7 @@
       <div class="screen-header">
 
         <span class="step-indicator">
-          Screen 6 of 14
+          Phase 3 of 6 · Hyper-Local Market Analysis
         </span>
 
         <h2>
@@ -1104,7 +1076,7 @@
       <div class="screen-header">
 
         <span class="step-indicator">
-          Screen 7 of 14
+          Phase 4 of 6 · Risk &amp; Opportunity Assessment
         </span>
 
         <h2>
@@ -1249,7 +1221,7 @@
       <div class="screen-header">
 
         <span class="step-indicator">
-          Screen 8 of 14
+          Phase 4 of 6 · Risk &amp; Opportunity Assessment
         </span>
 
         <h2>
@@ -1430,7 +1402,7 @@
       <div class="screen-header">
 
         <span class="step-indicator">
-          Screen 9 of 14
+          Phase 4 of 6 · Risk &amp; Opportunity Assessment
         </span>
 
         <h2>
@@ -1543,7 +1515,7 @@
       <div class="screen-header">
 
         <span class="step-indicator">
-          Screen 10 of 14
+          Phase 5 of 6 · Financial &amp; Loan Structuring
         </span>
 
         <h2>
@@ -1820,7 +1792,7 @@
       <div class="screen-header">
 
         <span class="step-indicator">
-          Screen 11 of 14
+          Phase 5 of 6 · Financial &amp; Loan Structuring
         </span>
 
         <h2>
@@ -1883,7 +1855,7 @@
       <div class="screen-header">
 
         <span class="step-indicator">
-          Screen 12 of 14
+          Phase 5 of 6 · Financial &amp; Loan Structuring
         </span>
 
         <h2>
@@ -2197,7 +2169,7 @@
       <div class="screen-header">
 
         <span class="step-indicator">
-          Screen 13 of 14
+          Phase 5 of 6 · Financial &amp; Loan Structuring
         </span>
 
         <h2>
