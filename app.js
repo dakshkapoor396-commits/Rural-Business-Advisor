@@ -100,44 +100,15 @@ const financialDefaults = {
    ============================================================ */
 
 const schemeCatalog = {
-  pmmy: {
-    id: "pmmy",
-    name: "PMMY Mudra Loan",
-    shortName: "PMMY Mudra",
-    description:
-      "Potentially relevant micro-enterprise credit option subject to lender and official eligibility checks.",
-    maxAmount: 1000000,
-    benchmarkRate: 9.5,
-    tenureMonths: 60,
-    moratoriumMonths: 1,
-    type: "Micro Enterprise Credit"
-  },
-
-  cgtmse: {
-    id: "cgtmse",
-    name: "CGTMSE Credit Support",
-    shortName: "CGTMSE",
-    description:
-      "Credit-guarantee support may be relevant for eligible micro and small enterprises through participating lenders.",
-    maxAmount: 5000000,
-    benchmarkRate: 10.5,
-    tenureMonths: 60,
-    moratoriumMonths: 3,
-    type: "Credit Guarantee Support"
-  },
-
-  startup: {
-    id: "startup",
-    name: "Enterprise Development Credit",
-    shortName: "Enterprise Credit",
-    description:
-      "Illustrative enterprise financing benchmark for planning purposes. Actual availability depends on lender and scheme rules.",
-    maxAmount: 2500000,
-    benchmarkRate: 11.5,
-    tenureMonths: 60,
-    moratoriumMonths: 3,
-    type: "Business Financing"
-  }
+  pmmy: { id: "pmmy", name: "Pradhan Mantri Mudra Yojana (PMMY)", shortName: "PMMY", description: "Collateral-free micro-enterprise credit through member lending institutions.", maxAmount: 2000000, benchmarkRate: 9.5, tenureMonths: 60, moratoriumMonths: 1, type: "Micro-enterprise credit", categories: ["dairy", "kirana", "poultry", "agro", "retail"], locations: ["all"], eligibility: "Non-corporate small business / micro enterprise; lender appraisal applies.", benefits: "Shishu, Kishor, Tarun and Tarun Plus credit categories; no scheme-level collateral requirement.", officialUrl: "https://www.mudra.org.in/", status: "Active", activeFrom: "2015-04-08", reviewBy: "2027-03-31" },
+  pmegp: { id: "pmegp", name: "Prime Minister's Employment Generation Programme (PMEGP)", shortName: "PMEGP", description: "Margin-money subsidy linked to bank finance for eligible new micro-enterprises.", maxAmount: 5000000, benchmarkRate: 10.5, tenureMonths: 84, moratoriumMonths: 6, type: "Subsidy-linked enterprise loan", categories: ["dairy", "kirana", "poultry", "agro", "retail"], locations: ["all"], eligibility: "New eligible unit; applicant and activity must meet current PMEGP rules. Existing units are not eligible.", benefits: "Margin-money subsidy varies by beneficiary category and rural/urban location; bank finances the balance.", officialUrl: "https://kviconline.gov.in/pmegpeportal/pmegpguidelines.jsp", status: "Active", activeFrom: "2008-08-15", reviewBy: "2027-03-31" },
+  cgtmse: { id: "cgtmse", name: "CGTMSE Credit Guarantee Scheme", shortName: "CGTMSE", description: "Credit guarantee support for eligible MSE loans through participating lenders; it is not a direct loan or subsidy.", maxAmount: 100000000, benchmarkRate: 10.5, tenureMonths: 84, moratoriumMonths: 3, type: "Credit guarantee", categories: ["dairy", "kirana", "poultry", "agro", "retail"], locations: ["all"], eligibility: "Eligible micro or small enterprise obtaining credit from a CGTMSE member lender.", benefits: "Guarantee cover can support collateral-free lending; enhanced cover is available for specified borrower and location groups.", officialUrl: "https://www.cgtmse.in/Home/VS/96", status: "Active", activeFrom: "2000-08-30", reviewBy: "2027-03-31" },
+  kcc_ah: { id: "kcc_ah", name: "Kisan Credit Card for Animal Husbandry", shortName: "KCC-AH", description: "Working-capital credit support for dairy and poultry animal-husbandry activities.", maxAmount: 300000, benchmarkRate: 7, tenureMonths: 60, moratoriumMonths: 0, type: "Animal husbandry working capital", categories: ["dairy", "poultry"], locations: ["all"], eligibility: "Dairy or poultry farmer / allied-activity operator meeting bank and KCC norms.", benefits: "Revolving working-capital limit and applicable interest support subject to timely repayment and bank terms.", officialUrl: "https://www.nabard.org/content1.aspx?id=602&catid=23&mid=23", status: "Active", activeFrom: "2019-02-01", reviewBy: "2027-03-31" },
+  ahidf: { id: "ahidf", name: "Animal Husbandry Infrastructure Development Fund (AHIDF)", shortName: "AHIDF", description: "Interest-subvention support for eligible private-sector animal-husbandry infrastructure.", maxAmount: 200000000, benchmarkRate: 9, tenureMonths: 96, moratoriumMonths: 24, type: "Infrastructure finance", categories: ["dairy", "poultry"], locations: ["all"], eligibility: "Eligible entrepreneur, MSME, FPO, cooperative or private company building approved dairy, poultry or feed infrastructure.", benefits: "Interest subvention and credit-guarantee support for approved infrastructure projects, subject to programme approval.", officialUrl: "https://dahd.nic.in/schemes/programmes/ahidf", status: "Active", activeFrom: "2020-06-24", reviewBy: "2027-03-31" },
+  aif: { id: "aif", name: "Agriculture Infrastructure Fund (AIF)", shortName: "AIF", description: "Financing support for eligible post-harvest and community farming infrastructure.", maxAmount: 20000000, benchmarkRate: 9, tenureMonths: 84, moratoriumMonths: 24, type: "Agriculture infrastructure finance", categories: ["dairy", "poultry", "agro"], locations: ["all"], eligibility: "Eligible farmer, agri-entrepreneur, FPO, cooperative, SHG, JLG or MSME creating approved agriculture infrastructure.", benefits: "Interest subvention on eligible loans and credit-guarantee support within programme limits.", officialUrl: "https://agriinfra.dac.gov.in/", status: "Active", activeFrom: "2020-08-09", reviewBy: "2027-03-31" },
+  standup: { id: "standup", name: "Stand-Up India", shortName: "Stand-Up India", description: "Bank-loan facilitation for greenfield enterprises promoted by women or SC/ST entrepreneurs.", maxAmount: 10000000, benchmarkRate: 10.5, tenureMonths: 84, moratoriumMonths: 18, type: "Greenfield enterprise loan", categories: ["dairy", "kirana", "poultry", "agro", "retail"], locations: ["all"], eligibility: "Greenfield enterprise with a woman or SC/ST promoter; borrower must satisfy bank and scheme conditions.", benefits: "Composite bank loan from ₹10 lakh to ₹1 crore with repayment tenure up to 7 years, including moratorium where applicable.", officialUrl: "https://www.standupmitra.in/", status: "Active", activeFrom: "2016-04-05", reviewBy: "2027-03-31" },
+  pmvishwakarma: { id: "pmvishwakarma", name: "PM Vishwakarma", shortName: "PM Vishwakarma", description: "Support for eligible traditional artisans and craftspeople, including tailoring-related trades.", maxAmount: 300000, benchmarkRate: 5, tenureMonths: 48, moratoriumMonths: 0, type: "Artisan enterprise support", categories: ["retail"], locations: ["all"], eligibility: "Traditional artisan or craftsperson in an approved trade, verified through the prescribed process.", benefits: "Skill training, toolkit incentive, digital transaction incentive and concessional enterprise loans in tranches.", officialUrl: "https://pmvishwakarma.gov.in/", status: "Active", activeFrom: "2023-09-17", reviewBy: "2028-03-31" },
+  pmsvanidhi: { id: "pmsvanidhi", name: "PM SVANidhi", shortName: "PM SVANidhi", description: "Working-capital support for eligible urban street vendors.", maxAmount: 50000, benchmarkRate: 7, tenureMonths: 12, moratoriumMonths: 0, type: "Street-vendor working capital", categories: ["kirana", "retail"], locations: ["urban"], eligibility: "Urban street vendor with the required certificate of vending, ID or local-body recommendation.", benefits: "Escalating working-capital loans, timely-repayment interest subsidy and digital-transaction cashback, subject to rules.", officialUrl: "https://pmsvanidhi.mohua.gov.in/", status: "Active", activeFrom: "2020-06-01", reviewBy: "2027-03-31" }
 };
 
 /* ============================================================
@@ -445,6 +416,38 @@ function calculateFeasibilityScore() {
   return appState.feasibilityScore;
 }
 
+function refreshFeasibilityFromInputs() {
+  const village = document.getElementById("village");
+  const block = document.getElementById("block");
+  const district = document.getElementById("district");
+  const capital = document.getElementById("capital");
+  const category = document.getElementById("category");
+
+  if (village) appState.location.village = village.value.trim();
+  if (block) appState.location.block = block.value.trim();
+  if (district) appState.location.district = district.value;
+  if (capital) appState.marginCapital = Math.max(0, parseFloat(capital.value) || 0);
+  if (category) appState.businessCategory = category.value;
+
+  const score = calculateFeasibilityScore();
+
+  /* Update the live dashboard immediately when it is being viewed. */
+  if (appState.currentScreen === 3) {
+    renderDashboard();
+    applyLanguage();
+  }
+
+  if (appState.currentScreen === 14) {
+    renderScreen14();
+    applyLanguage();
+  }
+
+  return {
+    score,
+    status: getScoreStatus(score)
+  };
+}
+
 /* ============================================================
    FORM VALIDATION
    ============================================================ */
@@ -566,7 +569,7 @@ function handleAssessmentSubmit(event) {
         validation.errors
           .map(
             (error) =>
-              `<div>• ${safeText(error)}</div>`
+              `<div>• ${safeText(document.documentElement.dataset.language === "hi" ? (easyHindi[error] || error) : error)}</div>`
           )
           .join("");
 
@@ -662,7 +665,37 @@ function getScoreStatus(score) {
   };
 }
 
+let feasibilityRenderTimer = null;
+let feasibilityRenderVersion = 0;
+
 function renderDashboard() {
+  const scoreNumber = document.getElementById("score-number");
+  const scoreBadge = document.getElementById("score-badge");
+  const scoreExplanation = document.getElementById("score-explanation");
+  const version = ++feasibilityRenderVersion;
+
+  if (feasibilityRenderTimer) {
+    clearTimeout(feasibilityRenderTimer);
+  }
+
+  if (scoreNumber) scoreNumber.textContent = "--";
+  if (scoreBadge) {
+    scoreBadge.textContent = "Calculating...";
+    scoreBadge.className = "status-badge";
+  }
+  if (scoreExplanation) {
+    scoreExplanation.textContent = "Analyzing your business inputs...";
+  }
+
+  /* The score is local and deterministic; this short state gives clear feedback
+     while guaranteeing that a result replaces the loader within one second. */
+  feasibilityRenderTimer = window.setTimeout(() => {
+    if (version !== feasibilityRenderVersion) return;
+    renderDashboardResults();
+  }, 450);
+}
+
+function renderDashboardResults() {
   calculateFeasibilityScore();
 
   const score =
@@ -746,6 +779,9 @@ function renderDashboard() {
     price.textContent =
       indicators.pricePotential || "--";
   }
+
+  feasibilityRenderTimer = null;
+  applyLanguage();
 }
 
 /* ============================================================
@@ -1917,68 +1953,65 @@ function getAvailableSchemeCatalog() {
   return schemeCatalog;
 }
 
+function escapeHtml(value) {
+  return safeText(value).replace(/[&<>'"]/g, (character) => ({
+    "&": "&amp;", "<": "&lt;", ">": "&gt;", "'": "&#39;", '"': "&quot;"
+  })[character]);
+}
+
+function getBusinessLocationScope() {
+  const location = appState.location || {};
+
+  // The intake currently captures a village/block/district, not an urban-vendor
+  // certificate. Treat a recorded village or block as rural for location-only schemes.
+  return safeText(location.village) || safeText(location.block) ? "rural" : "unknown";
+}
+
+function isSchemeCurrentlyActive(scheme) {
+  const today = new Date().toISOString().slice(0, 10);
+  return scheme.status === "Active" &&
+    (!scheme.activeFrom || scheme.activeFrom <= today) &&
+    (!scheme.activeUntil || scheme.activeUntil >= today) &&
+    (!scheme.reviewBy || scheme.reviewBy >= today);
+}
+
+function getSchemeEligibility(scheme, locationScope) {
+  const categoryMatches = safeArray(scheme.categories).includes(appState.businessCategory);
+  const locations = safeArray(scheme.locations, ["all"]);
+  const locationMatches = locations.includes("all") || locations.includes(locationScope);
+
+  if (!categoryMatches) return { eligible: false, label: "Business category not covered" };
+  if (!locationMatches) return { eligible: false, label: "Location requirement not met" };
+  return { eligible: true, label: "Potentially eligible — lender / scheme verification required" };
+}
+
 function evaluateSchemes() {
   calculateFinancialPlan();
 
-  const requestedLoan =
-    appState.financials.loanAmount;
+  const requestedLoan = appState.financials.loanAmount;
+  const projectCost = appState.financials.projectCost;
+  const locationScope = getBusinessLocationScope();
 
   const catalog =
     getAvailableSchemeCatalog();
 
-  const entries =
-    Object.keys(catalog).map(
-      (key) => ({
-        ...catalog[key],
-        id:
-          catalog[key].id ||
-          key
-      })
-    );
+  const entries = Object.keys(catalog).map((key) => ({ ...catalog[key], id: catalog[key].id || key }));
 
-  const ranked =
-    entries.map(
-      (scheme) => {
-        let score = 50;
+  const ranked = entries
+    .filter(isSchemeCurrentlyActive)
+    .map((scheme) => {
+      const eligibility = getSchemeEligibility(scheme, locationScope);
+      const maxAmount = safeNumber(scheme.maxAmount, 0);
+      let score = 20;
+      if (eligibility.eligible) score += 35;
+      if (maxAmount >= requestedLoan) score += 25;
+      else score -= 20;
+      if (maxAmount >= projectCost) score += 8;
+      if (safeNumber(scheme.tenureMonths, 0) >= appState.financials.tenureMonths) score += 7;
+      if (safeArray(scheme.locations, ["all"]).includes("all")) score += 5;
 
-        const maxAmount =
-          safeNumber(
-            scheme.maxAmount,
-            0
-          );
-
-        if (
-          maxAmount >=
-          requestedLoan
-        ) {
-          score += 30;
-        } else {
-          score -= 20;
-        }
-
-        if (
-          safeNumber(
-            scheme.tenureMonths,
-            0
-          ) >=
-          appState.financials
-            .tenureMonths
-        ) {
-          score += 10;
-        }
-
-        score = clamp(
-          score,
-          0,
-          100
-        );
-
-        return {
-          ...scheme,
-          matchScore: score
-        };
-      }
-    );
+      return { ...scheme, eligibility, matchScore: clamp(score, 0, 100), locationScope };
+    });
 
   ranked.sort(
     (a, b) =>
@@ -1986,7 +2019,10 @@ function evaluateSchemes() {
       a.matchScore
   );
 
-  return ranked;
+  // Keep at least five active, category-relevant options visible. Location or
+  // applicant restrictions are clearly flagged and cannot be selected as a match.
+  const categoryRelevant = ranked.filter((scheme) => safeArray(scheme.categories).includes(appState.businessCategory));
+  return categoryRelevant.slice(0, Math.max(5, categoryRelevant.length));
 }
 
 function renderScreen11() {
@@ -2009,6 +2045,16 @@ function renderScreen11() {
 
   const schemes =
     evaluateSchemes();
+
+  const selectedSchemeIsEligible = schemes.some(
+    (scheme) => scheme.id === appState.financials.selectedSchemeId && scheme.eligibility.eligible
+  );
+
+  if (!selectedSchemeIsEligible) {
+    const firstEligibleScheme = schemes.find((scheme) => scheme.eligibility.eligible);
+    appState.financials.selectedSchemeId = firstEligibleScheme ? firstEligibleScheme.id : "";
+    appState.financials.recommendedScheme = firstEligibleScheme ? firstEligibleScheme.name : "";
+  }
 
   if (target) {
     target.textContent =
@@ -2044,6 +2090,7 @@ function renderScreen11() {
         );
       }
 
+      const selectDisabled = !scheme.eligibility.eligible;
       card.innerHTML = `
         <div class="scheme-card-header">
           <div>
@@ -2056,56 +2103,25 @@ function renderScreen11() {
           </div>
 
           <span class="scheme-type">
-            ${safeText(
-              scheme.type,
-              "Credit Option"
-            )}
+            ${escapeHtml(safeText(scheme.type, "Credit Option"))}
           </span>
         </div>
 
         <h3>
-          ${safeText(
-            scheme.name,
-            "Credit Scheme"
-          )}
+          ${escapeHtml(safeText(scheme.name, "Credit Scheme"))}
         </h3>
 
-        <p>
-          ${safeText(
-            scheme.description,
-            "Potentially relevant financing option."
-          )}
+        <p class="scheme-desc">
+          ${escapeHtml(safeText(scheme.description, "Potentially relevant financing option."))}
         </p>
 
-        <div class="scheme-details">
-          <span>
-            Max Reference:
-            <strong>
-              ${formatCurrency(
-                scheme.maxAmount || 0
-              )}
-            </strong>
-          </span>
-
-          <span>
-            Benchmark Rate:
-            <strong>
-              ${safeNumber(
-                scheme.benchmarkRate,
-                0
-              ).toFixed(2)}%
-            </strong>
-          </span>
-
-          <span>
-            Tenure:
-            <strong>
-              ${safeNumber(
-                scheme.tenureMonths,
-                0
-              )} Months
-            </strong>
-          </span>
+        <div class="scheme-specs-grid">
+          <div class="spec-item"><span class="spec-label">Current status</span><strong class="spec-val scheme-status-active">${escapeHtml(scheme.status)}</strong></div>
+          <div class="spec-item"><span class="spec-label">Business category</span><strong class="spec-val">${escapeHtml(safeArray(scheme.categories).map((key) => categoryDefaults[key]?.label || key).join(", "))}</strong></div>
+          <div class="spec-item"><span class="spec-label">Eligibility check</span><strong class="spec-val ${scheme.eligibility.eligible ? "eligibility-yes" : "eligibility-no"}">${escapeHtml(scheme.eligibility.label)}</strong></div>
+          <div class="spec-item"><span class="spec-label">Key benefits</span><strong class="spec-val">${escapeHtml(scheme.benefits)}</strong></div>
+          <div class="spec-item"><span class="spec-label">Maximum reference</span><strong class="spec-val">${formatCurrency(scheme.maxAmount || 0)}</strong></div>
+          <div class="spec-item"><span class="spec-label">Official source</span><a class="scheme-source-link" href="${escapeHtml(scheme.officialUrl)}" target="_blank" rel="noopener noreferrer">View current rules</a></div>
         </div>
 
         <button
@@ -2114,13 +2130,14 @@ function renderScreen11() {
           data-scheme-id="${safeText(
             scheme.id
           )}"
+          ${selectDisabled ? "disabled title=\"This scheme does not match the recorded location or category.\"" : ""}
         >
           ${
             scheme.id ===
             appState.financials
               .selectedSchemeId
               ? "Selected"
-              : "Select Scheme"
+              : selectDisabled ? "Not eligible for recorded location" : "Select Scheme"
           }
         </button>
       `;
@@ -2173,6 +2190,10 @@ function selectScheme(
     catalog[schemeId];
 
   if (!scheme) {
+    return;
+  }
+
+  if (!isSchemeCurrentlyActive(scheme) || !getSchemeEligibility(scheme, getBusinessLocationScope()).eligible) {
     return;
   }
 
@@ -2557,6 +2578,22 @@ function recalculateEMIFromInputs() {
       );
   }
 
+  /* Keep the already-rendered repayment view in sync as the loan changes. */
+  if (
+    document.getElementById(
+      "amortization-tbody"
+    )
+  ) {
+    renderScheduleTable();
+  }
+
+  /* Refresh the final report only when it is the active view. */
+  if (
+    appState.currentScreen === 14
+  ) {
+    renderScreen14();
+  }
+
   return {
     emi,
     totalInterest,
@@ -2607,18 +2644,23 @@ function initEMICalculatorListeners() {
       "emi-rate-slider"
     );
 
+  const refreshLoanCalculations = () => {
+    recalculateEMIFromInputs();
+  };
+
   principalInput?.addEventListener(
     "input",
-    () => {
-      recalculateEMIFromInputs();
-    }
+    refreshLoanCalculations
+  );
+
+  principalInput?.addEventListener(
+    "change",
+    refreshLoanCalculations
   );
 
   rateSlider?.addEventListener(
     "input",
-    () => {
-      recalculateEMIFromInputs();
-    }
+    refreshLoanCalculations
   );
 }
 
@@ -4125,6 +4167,8 @@ function goToScreen(
     target
   );
 
+  applyLanguage();
+
   window.scrollTo({
     top: 0,
     behavior: "smooth"
@@ -4402,7 +4446,201 @@ function runAdvisorTestSuite() {
    APPLICATION INITIALIZATION
    ============================================================ */
 
+const easyHindi = {
+  "From local business idea to a loan-ready feasibility report": "लोकल बिज़नेस आइडिया से लोन-रेडी रिपोर्ट तक",
+  "Phase 1 of 6": "6 में से फेज़ 1",
+  "Dark Mode": "डार्क मोड",
+  "Light Mode": "लाइट मोड",
+  "Business Input": "बिज़नेस जानकारी",
+  "Feasibility": "फीज़िबिलिटी",
+  "Local Market": "लोकल मार्केट",
+  "Risk & Opportunity": "रिस्क और मौके",
+  "Finance & Loan": "फाइनेंस और लोन",
+  "Final Report": "फाइनल रिपोर्ट",
+  "Build a business plan that is viable before you borrow": "लोन लेने से पहले अपना बिज़नेस प्लान जाँचें",
+  "ArthSetu connects your local business idea, market reality, risks and finances into one practical feasibility report.": "अर्थसेतु आपके लोकल बिज़नेस आइडिया, मार्केट, रिस्क और फाइनेंस को एक आसान रिपोर्ट में जोड़ता है।",
+  "Business & Feasibility": "बिज़नेस और फीज़िबिलिटी",
+  "Hyper-Local Market & Risk": "आपके इलाके का मार्केट और रिस्क",
+  "Finance to Final Report": "फाइनेंस से फाइनल रिपोर्ट तक",
+  "Start Business Assessment →": "बिज़नेस असेसमेंट शुरू करें →",
+  "Business Assessment Intake": "बिज़नेस की बेसिक जानकारी",
+  "Provide your geographic and capital baseline to evaluate venture viability.": "बिज़नेस जाँचने के लिए अपनी लोकेशन और उपलब्ध पूंजी बताएं।",
+  "Location Baseline": "आपकी लोकेशन",
+  "Village / Gram Panchayat": "गाँव / ग्राम पंचायत",
+  "Block": "ब्लॉक",
+  "District": "ज़िला",
+  "Available Margin Capital": "उपलब्ध पूंजी",
+  "Business Category": "बिज़नेस टाइप",
+  "-- Select District --": "-- ज़िला चुनें --",
+  "-- Choose Category --": "-- बिज़नेस टाइप चुनें --",
+  "Minimum required: ₹1,000 (your personal equity/investment)": "कम से कम ₹1,000 (आपका अपना निवेश)",
+  "Analyze My Business →": "मेरा बिज़नेस जाँचें →",
+  "← Back": "← वापस",
+  "Business Feasibility Dashboard": "बिज़नेस फीज़िबिलिटी डैशबोर्ड",
+  "Overall Feasibility Score": "कुल फीज़िबिलिटी स्कोर",
+  "Core Market Indicators": "मार्केट के मुख्य पॉइंट",
+  "Market Demand": "मार्केट डिमांड",
+  "Competition Level": "कॉम्पिटिटर लेवल",
+  "Initial Risk Level": "शुरुआती रिस्क लेवल",
+  "Price Potential": "कीमत की संभावना",
+  "← Edit Inputs": "← Details badlein",
+  "Proceed to Market Analysis →": "मार्केट एनालिसिस देखें →",
+  "Market Scope & Target Demographics": "आपके इलाके का मार्केट",
+  "Who Can Buy Your Product": "आपका प्रोडक्ट कौन खरीदेगा",
+  "Estimated Market Reach": "मार्केट रीच का अनुमान",
+  "Customer Segments": "कस्टमर ग्रुप",
+  "Distribution Channels": "डिलीवरी के तरीके",
+  "← Back to Dashboard": "← Dashboard par wapas",
+  "Proceed to Opportunity Analysis →": "मौकों का एनालिसिस देखें →",
+  "Growth & Opportunity Analysis": "ग्रोथ और मौकों का एनालिसिस",
+  "Strategic Expansion Pathways": "बिज़नेस बढ़ाने के तरीके",
+  "Proceed to Competitor Analysis →": "कॉम्पिटिटर एनालिसिस देखें →",
+  "Competitor & Industry Landscape": "कॉम्पिटिटर और इंडस्ट्री की जानकारी",
+  "Proceed to SWOT Analysis →": "SWOT एनालिसिस देखें →",
+  "SWOT & Internal Readiness": "SWOT और बिज़नेस तैयारी",
+  "Strengths": "ताकत",
+  "Weaknesses": "कमज़ोरियाँ",
+  "Opportunities": "मौके",
+  "Threats": "खतरे",
+  "Proceed to Risk Assessment →": "रिस्क असेसमेंट देखें →",
+  "Threats & Risk Assessment": "खतरे और रिस्क असेसमेंट",
+  "Proceed to Pricing Analysis →": "प्राइसिंग एनालिसिस देखें →",
+  "Pricing & Value Proposition": "प्राइसिंग और वैल्यू",
+  "Proceed to Financial Planning →": "फाइनेंशियल प्लानिंग करें →",
+  "Financial & Loan Structuring": "फाइनेंस और लोन प्लानिंग",
+  "Project Cost Estimation": "प्रोजेक्ट कॉस्ट का अनुमान",
+  "Margin Contribution": "आपका योगदान",
+  "Loan Requirement": "लोन की ज़रूरत",
+  "Calculate Financial Structure": "फाइनेंस कैलकुलेट करें",
+  "Proceed to Government Schemes →": "सही स्कीम देखें →",
+  "Government Scheme Matching": "सही सरकारी स्कीम",
+  "Proceed to EMI Calculator →": "ईएमआई कैलकुलेटर खोलें →",
+  "EMI & Repayment Planning": "ईएमआई और पेमेंट प्लानिंग",
+  "Loan Principal (₹)": "लोन अमाउंट (₹)",
+  "Annual Interest Rate (% p.a.)": "ब्याज दर (% सालाना)",
+  "Repayment Tenure": "लोन चुकाने का समय",
+  "View Repayment Schedule →": "पेमेंट शेड्यूल देखें →",
+  "Amortization & Repayment Schedule": "ईएमआई और पेमेंट शेड्यूल",
+  "Monthly View": "महीने का व्यू",
+  "Quarterly View": "3 महीने का व्यू",
+  "Generate Final Business Report →": "फाइनल बिज़नेस रिपोर्ट बनाएं →",
+  "Business Feasibility Report": "बिज़नेस फीज़िबिलिटी रिपोर्ट",
+  "Official Assessment Dossier": "बिज़नेस असेसमेंट रिपोर्ट",
+  "Financial Verification": "फाइनेंस जाँच",
+  "Strategic Advisory & Next-Step Action Plan": "आगे का एक्शन प्लान",
+  "Recommended Next Steps": "आपके अगले स्टेप",
+  "← Back to Schedule": "← Schedule par wapas",
+  "Start New Assessment": "नया असेसमेंट शुरू करें",
+  "Download / Print Report": "रिपोर्ट डाउनलोड / प्रिंट करें",
+  "Calculating...": "कैलकुलेट हो रहा है...",
+  "Analyzing your business inputs...": "आपकी बिज़नेस जानकारी जाँची जा रही है...",
+  "High Viability": "अच्छी संभावना",
+  "Moderate Viability": "ठीक-ठाक संभावना",
+  "High Caution": "सावधानी ज़रूरी",
+  "Loading recommendation...": "सुझाव लोड हो रहा है...",
+  "Village / Gram Panchayat is required.": "गाँव / ग्राम पंचायत लिखना ज़रूरी है।",
+  "Block is required.": "ब्लॉक लिखना ज़रूरी है।",
+  "Please select a District.": "कृपया ज़िला चुनें।",
+  "Available Margin Capital must be at least ₹1,000.": "उपलब्ध पूंजी कम से कम ₹1,000 होनी चाहिए।",
+  "Please choose a Business Category.": "कृपया बिज़नेस टाइप चुनें।"
+};
+
+function translateNodeText(node, language) {
+  const original = node.dataset.enText || node.textContent.trim().replace(/\s+/g, " ");
+
+  if (!original) return;
+  if (!node.dataset.enText) node.dataset.enText = original;
+
+  const translated = language === "hi" ? easyHindi[original] : original;
+  if (!translated) return;
+
+  node.textContent = translated;
+}
+
+function applyLanguage(language = document.documentElement.dataset.language || "en") {
+  const isHindi = language === "hi";
+  document.documentElement.lang = isHindi ? "hi" : "en";
+  document.documentElement.dataset.language = isHindi ? "hi" : "en";
+
+  document.querySelectorAll("[data-i18n-text]").forEach((element) => {
+    translateNodeText(element, language);
+  });
+
+  document.querySelectorAll("h1, h2, h3, h4, p, span, strong, small, label, legend, button, li, blockquote, th").forEach((element) => {
+    if (element.closest("script, style, select, option") || element.children.length > 0) return;
+    translateNodeText(element, language);
+  });
+
+  document.querySelectorAll("[placeholder]").forEach((element) => {
+    const original = element.dataset.enPlaceholder || element.getAttribute("placeholder");
+    if (!element.dataset.enPlaceholder) element.dataset.enPlaceholder = original;
+    element.setAttribute("placeholder", isHindi ? (easyHindi[original] || original) : original);
+  });
+
+  const languageToggle = document.getElementById("language-toggle");
+  if (languageToggle) languageToggle.value = isHindi ? "hi" : "en";
+}
+
+function initializeLanguageToggle() {
+  const languageToggle = document.getElementById("language-toggle");
+  applyLanguage();
+
+  languageToggle?.addEventListener("change", (event) => {
+    const language = event.target.value === "hi" ? "hi" : "en";
+    applyLanguage(language);
+    updateProgressTracker(appState.currentScreen || 1);
+    try {
+      localStorage.setItem("arthsetu-language", language);
+    } catch (error) {
+      // Language switching still works if storage is unavailable.
+    }
+  });
+}
+
+function applyTheme(theme) {
+  const isDark = theme === "dark";
+  const root = document.documentElement;
+  const toggle = document.getElementById("theme-toggle");
+
+  if (isDark) {
+    root.dataset.theme = "dark";
+  } else {
+    delete root.dataset.theme;
+  }
+
+  if (toggle) {
+    toggle.setAttribute("aria-pressed", String(isDark));
+    toggle.setAttribute(
+      "aria-label",
+      isDark ? "Switch to light mode" : "Switch to dark mode"
+    );
+    toggle.querySelector(".theme-toggle-icon").textContent = isDark ? "☀️" : "🌙";
+    toggle.querySelector(".theme-toggle-label").textContent = isDark ? "Light Mode" : "Dark Mode";
+  }
+}
+
+function initializeThemeToggle() {
+  const toggle = document.getElementById("theme-toggle");
+  const savedTheme = document.documentElement.dataset.theme === "dark" ? "dark" : "light";
+
+  applyTheme(savedTheme);
+
+  toggle?.addEventListener("click", () => {
+    const nextTheme = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+    applyTheme(nextTheme);
+
+    try {
+      localStorage.setItem("arthsetu-theme", nextTheme);
+    } catch (error) {
+      // The toggle remains usable if browser storage is unavailable.
+    }
+  });
+}
+
 function initializeApplication() {
+  initializeLanguageToggle();
+  initializeThemeToggle();
+
   /* Start button */
 
   const startButton =
@@ -4447,6 +4685,8 @@ function initializeApplication() {
         appState.location
           .village =
           event.target.value;
+
+        refreshFeasibilityFromInputs();
       }
     );
 
@@ -4460,6 +4700,8 @@ function initializeApplication() {
         appState.location
           .block =
           event.target.value;
+
+        refreshFeasibilityFromInputs();
       }
     );
 
@@ -4473,6 +4715,8 @@ function initializeApplication() {
         appState.location
           .district =
           event.target.value;
+
+        refreshFeasibilityFromInputs();
       }
     );
 
@@ -4487,6 +4731,8 @@ function initializeApplication() {
           parseFloat(
             event.target.value
           ) || 0;
+
+        refreshFeasibilityFromInputs();
       }
     );
 
@@ -4500,7 +4746,7 @@ function initializeApplication() {
         appState.businessCategory =
           event.target.value;
 
-        calculateFeasibilityScore();
+        refreshFeasibilityFromInputs();
       }
     );
 
@@ -4797,84 +5043,51 @@ function getInitialAppState() {
  */
 function updateProgressTracker(currentStep) {
 
-  const nodes =
-    document.querySelectorAll(".step-node");
+  const screen = Math.min(Math.max(Number(currentStep) || 1, 1), TOTAL_SCREENS);
+  const phaseByScreen = {
+    1: 1, 2: 1, 3: 2, 4: 3, 5: 3, 6: 3,
+    7: 4, 8: 4, 9: 4, 10: 5, 11: 5, 12: 5,
+    13: 5, 14: 6
+  };
+  const phaseNames = {
+    1: "Business & User Information",
+    2: "Business Feasibility Analysis",
+    3: "Hyper-Local Market Analysis",
+    4: "Risk & Opportunity Assessment",
+    5: "Financial & Loan Structuring",
+    6: "Final Business Feasibility Report"
+  };
+  const hindiPhaseNames = {
+    1: "बिज़नेस और आपकी जानकारी",
+    2: "बिज़नेस फीज़िबिलिटी एनालिसिस",
+    3: "आपके इलाके का मार्केट एनालिसिस",
+    4: "रिस्क और मौकों का असेसमेंट",
+    5: "फाइनेंस और लोन प्लानिंग",
+    6: "फाइनल बिज़नेस फीज़िबिलिटी रिपोर्ट"
+  };
+  const currentPhase = phaseByScreen[screen] || 1;
+  const isHindi = document.documentElement.dataset.language === "hi";
 
-  const counterBadge =
-    document.getElementById("step-counter-badge");
+  document.querySelectorAll(".step-node").forEach((node) => {
+    const nodePhase = Number(node.dataset.phase);
+    node.classList.remove("active-node", "completed-node");
 
-
-  // Safety check
-  if (
-    typeof currentStep !== "number" ||
-    currentStep < 1 ||
-    currentStep > 14
-  ) {
-    currentStep = 1;
-  }
-
-
-  // Update top-right counter
-  if (counterBadge) {
-
-    counterBadge.textContent =
-      `Step ${currentStep} of 14`;
-
-  }
-
-
-  // Update individual step nodes
-  nodes.forEach((node) => {
-
-    const stepVal =
-      parseInt(
-        node.getAttribute("data-step"),
-        10
-      );
-
-
-    node.classList.remove(
-      "active-node",
-      "completed-node"
-    );
-
-
-    // Current step
-    if (stepVal === currentStep) {
-
-      node.classList.add(
-        "active-node"
-      );
-
-      node.textContent =
-        `${stepVal}`;
-
+    if (nodePhase === currentPhase) {
+      node.classList.add("active-node");
+    } else if (nodePhase < currentPhase) {
+      node.classList.add("completed-node");
     }
-
-
-    // Completed steps
-    else if (stepVal < currentStep) {
-
-      node.classList.add(
-        "completed-node"
-      );
-
-      node.textContent =
-        `${stepVal}`;
-
-    }
-
-
-    // Future steps
-    else {
-
-      node.textContent =
-        `${stepVal}`;
-
-    }
-
   });
 
+  const counterBadge = document.getElementById("step-counter-badge");
+  if (counterBadge) {
+    counterBadge.textContent = isHindi ? `6 में से फेज़ ${currentPhase}` : `Phase ${currentPhase} of 6`;
+  }
+
+  document.querySelectorAll(".step-indicator").forEach((element) => {
+    const phaseLabel = isHindi ? hindiPhaseNames[currentPhase] : phaseNames[currentPhase];
+    element.textContent = isHindi ? `6 में से फेज़ ${currentPhase} · ${phaseLabel}` : `Phase ${currentPhase} of 6 · ${phaseLabel}`;
+  });
 }
 
 
@@ -5342,6 +5555,8 @@ function loadDemoScenario(presetType) {
     }
 
   });
+
+  refreshFeasibilityFromInputs();
 
 }
 
