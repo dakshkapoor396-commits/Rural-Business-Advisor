@@ -1,0 +1,2993 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <title>Rural Business Advisor</title>
+
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+
+
+<body>
+
+
+  <!-- =========================================================
+       PERSISTENT HEADER
+       ========================================================= -->
+
+  <header class="app-header">
+
+    <div class="header-inner">
+
+      <div class="header-brand-row">
+
+        <div>
+
+          <h1 class="brand-title">
+            Rural Business Advisor
+          </h1>
+
+          <p class="brand-tagline">
+            De-risking rural micro-enterprises before capital deployment
+          </p>
+
+        </div>
+
+
+        <!-- STEP COUNTER -->
+
+        <div
+          id="step-counter-badge"
+          class="step-counter-badge"
+        >
+          Step 1 of 14
+        </div>
+
+      </div>
+
+
+      <!-- =====================================================
+           PROGRESS TRACKER
+           ===================================================== -->
+
+      <nav
+        aria-label="Progress Tracker"
+        class="stepper-wrapper no-print"
+      >
+
+        <ol
+          class="stepper-track"
+          id="stepper-track"
+        >
+
+          <li
+            class="step-node active-node"
+            data-step="1"
+            title="Landing"
+          >
+            1
+          </li>
+
+          <li
+            class="step-node"
+            data-step="2"
+            title="Profile Intake"
+          >
+            2
+          </li>
+
+          <li
+            class="step-node"
+            data-step="3"
+            title="Feasibility Dashboard"
+          >
+            3
+          </li>
+
+          <li
+            class="step-node"
+            data-step="4"
+            title="Market Scope"
+          >
+            4
+          </li>
+
+          <li
+            class="step-node"
+            data-step="5"
+            title="Opportunities"
+          >
+            5
+          </li>
+
+          <li
+            class="step-node"
+            data-step="6"
+            title="Competitors"
+          >
+            6
+          </li>
+
+          <li
+            class="step-node"
+            data-step="7"
+            title="SWOT"
+          >
+            7
+          </li>
+
+          <li
+            class="step-node"
+            data-step="8"
+            title="Threats & Risks"
+          >
+            8
+          </li>
+
+          <li
+            class="step-node"
+            data-step="9"
+            title="Pricing & Value"
+          >
+            9
+          </li>
+
+          <li
+            class="step-node"
+            data-step="10"
+            title="Financial Calculator"
+          >
+            10
+          </li>
+
+          <li
+            class="step-node"
+            data-step="11"
+            title="Government Schemes"
+          >
+            11
+          </li>
+
+          <li
+            class="step-node"
+            data-step="12"
+            title="EMI Calculator"
+          >
+            12
+          </li>
+
+          <li
+            class="step-node"
+            data-step="13"
+            title="Amortization Schedule"
+          >
+            13
+          </li>
+
+          <li
+            class="step-node"
+            data-step="14"
+            title="Final Enterprise Report"
+          >
+            14
+          </li>
+
+        </ol>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+
+  <!-- =========================================================
+       MAIN APPLICATION
+       ========================================================= -->
+
+  <main class="app-container">
+
+
+
+    <!-- =======================================================
+         SCREEN 1
+         LANDING
+         ======================================================= -->
+
+    <section
+      id="screen-1"
+      class="step-screen active-step"
+    >
+
+      <div class="hero-section">
+
+        <span class="hero-badge">
+          Enterprise Pre-Check
+        </span>
+
+        <h2 class="hero-title">
+          Validate Viability Before Taking Credit
+        </h2>
+
+        <p class="hero-desc">
+          Evaluate local demand, uncover hidden operational costs,
+          and stress-test repayment capability before committing
+          your savings or taking high-interest loans.
+        </p>
+
+      </div>
+
+
+      <div class="features-grid">
+
+
+        <article class="feature-card">
+
+          <div class="feature-number">
+            01
+          </div>
+
+          <h3>
+            Viability Assessment
+          </h3>
+
+          <p>
+            Scan local demand, supply saturation, and footfall
+            density across your block or village.
+          </p>
+
+        </article>
+
+
+        <article class="feature-card">
+
+          <div class="feature-number">
+            02
+          </div>
+
+          <h3>
+            Market &amp; SWOT
+          </h3>
+
+          <p>
+            Identify regulatory bottlenecks, seasonal shifts,
+            and direct local competition.
+          </p>
+
+        </article>
+
+
+        <article class="feature-card">
+
+          <div class="feature-number">
+            03
+          </div>
+
+          <h3>
+            Loan Structuring
+          </h3>
+
+          <p>
+            Calibrate margin money requirements against realistic
+            monthly cash flow forecasts.
+          </p>
+
+        </article>
+
+      </div>
+
+
+      <div class="cta-wrapper">
+
+        <button
+          id="start-assessment-btn"
+          type="button"
+          class="btn btn-primary cta-btn"
+        >
+          Start Business Assessment &rarr;
+        </button>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =======================================================
+         SCREEN 2
+         BUSINESS ASSESSMENT
+         ======================================================= -->
+
+    <section
+      id="screen-2"
+      class="step-screen hidden-step"
+    >
+
+      <div class="screen-header">
+
+        <span class="step-indicator">
+          Screen 2 of 14
+        </span>
+
+        <h2>
+          Business Assessment Intake
+        </h2>
+
+        <p class="section-subtitle">
+          Provide your geographic and capital baseline to evaluate
+          venture viability.
+        </p>
+
+      </div>
+
+
+      <div
+        id="form-errors"
+        class="error-banner hidden-step"
+      ></div>
+
+
+      <form id="assessment-form">
+      
+      <!-- Live Demo Preset Bar (Screen 2) -->
+<div class="demo-preset-bar no-print">
+  <span class="demo-preset-label">⚡ Live Presentation Presets:</span>
+
+  <button
+    type="button"
+    class="btn btn-demo"
+    onclick="loadDemoScenario('dairy')"
+  >
+    Demo A: Dairy (₹50k Margin)
+  </button>
+
+  <button
+    type="button"
+    class="btn btn-demo"
+    onclick="loadDemoScenario('kirana')"
+  >
+    Demo B: Kirana (₹25k Margin)
+  </button>
+</div>
+
+        <fieldset class="form-section">
+
+          <legend>
+            Location Baseline
+          </legend>
+
+          <div class="form-grid">
+
+
+            <div class="form-group">
+
+              <label for="village">
+                Village / Gram Panchayat
+                <span class="required">*</span>
+              </label>
+
+              <input
+                type="text"
+                id="village"
+                placeholder="e.g., Rampur"
+              />
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label for="block">
+                Block
+                <span class="required">*</span>
+              </label>
+
+              <input
+                type="text"
+                id="block"
+                placeholder="e.g., Sadar"
+              />
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label for="district">
+                District
+                <span class="required">*</span>
+              </label>
+
+              <select id="district">
+
+                <option value="">
+                  -- Select District --
+                </option>
+
+                <option value="Ranchi">
+                  Ranchi
+                </option>
+
+                <option value="Varanasi">
+                  Varanasi
+                </option>
+
+                <option value="Patna">
+                  Patna
+                </option>
+
+                <option value="Gorakhpur">
+                  Gorakhpur
+                </option>
+
+                <option value="Dhanbad">
+                  Dhanbad
+                </option>
+
+                <option value="Muzaffarpur">
+                  Muzaffarpur
+                </option>
+
+                <option value="Other">
+                  Other / Unlisted
+                </option>
+
+              </select>
+
+            </div>
+
+          </div>
+
+        </fieldset>
+
+
+
+        <fieldset class="form-section">
+
+          <legend>
+            Enterprise Parameters
+          </legend>
+
+          <div class="form-grid">
+
+
+            <div class="form-group">
+
+              <label for="capital">
+                Available Margin Capital
+                <span class="required">*</span>
+              </label>
+
+              <div class="input-currency-wrapper">
+
+                <span class="currency-symbol">
+                  ₹
+                </span>
+
+                <input
+                  type="number"
+                  id="capital"
+                  placeholder="25000"
+                  min="1000"
+                  step="500"
+                />
+
+              </div>
+
+              <small class="field-hint">
+                Minimum required: ₹1,000
+                (your personal equity/investment)
+              </small>
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label for="category">
+                Business Category
+                <span class="required">*</span>
+              </label>
+
+              <select id="category">
+
+                <option value="">
+                  -- Choose Category --
+                </option>
+
+                <option value="dairy">
+                  Dairy Farming
+                </option>
+
+                <option value="kirana">
+                  Grocery / Kirana Store
+                </option>
+
+                <option value="poultry">
+                  Poultry Farming
+                </option>
+
+                <option value="agro">
+                  Agro-processing (Flour/Oil Mill)
+                </option>
+
+                <option value="retail">
+                  Rural Retail / Tailoring
+                </option>
+
+              </select>
+
+            </div>
+
+          </div>
+
+        </fieldset>
+
+
+        <div class="nav-actions">
+
+          <button
+            type="button"
+            class="btn btn-secondary"
+            onclick="goToScreen(1)"
+          >
+            &larr; Back
+          </button>
+
+          <button
+            type="submit"
+            class="btn btn-primary"
+          >
+            Analyze My Business &rarr;
+          </button>
+
+        </div>
+
+      </form>
+
+    </section>
+
+
+
+    <!-- =======================================================
+         SCREEN 3
+         FEASIBILITY DASHBOARD
+         ======================================================= -->
+
+    <section
+      id="screen-3"
+      class="step-screen hidden-step"
+    >
+
+      <div class="screen-header">
+
+        <span class="step-indicator">
+          Screen 3 of 14
+        </span>
+
+        <h2>
+          Business Feasibility Dashboard
+        </h2>
+
+        <p class="section-subtitle">
+          Readiness and market risk profile based on your capital
+          and domain benchmarks.
+        </p>
+
+      </div>
+
+
+      <div
+        id="score-card"
+        class="score-card"
+      >
+
+        <div class="score-meta">
+
+          <span class="score-label">
+            Overall Feasibility Score
+          </span>
+
+          <div class="score-display">
+
+            <span
+              id="score-number"
+              class="score-number"
+            >
+              --
+            </span>
+
+            <span class="score-max">
+              / 100
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <div class="score-status-container">
+
+          <span
+            id="score-badge"
+            class="status-badge"
+          >
+            Calculating...
+          </span>
+
+          <p
+            id="score-explanation"
+            class="score-explanation"
+          ></p>
+
+        </div>
+
+      </div>
+
+
+      <h3 class="subsection-title">
+        Core Market Indicators
+      </h3>
+
+
+      <div class="indicators-grid">
+
+
+        <div class="indicator-card">
+
+          <span class="indicator-title">
+            Market Demand
+          </span>
+
+          <div
+            id="indicator-demand"
+            class="indicator-value"
+          >
+            --
+          </div>
+
+          <span class="indicator-desc">
+            Local consumption &amp; footfall appetite
+          </span>
+
+        </div>
+
+
+        <div class="indicator-card">
+
+          <span class="indicator-title">
+            Competition Level
+          </span>
+
+          <div
+            id="indicator-competition"
+            class="indicator-value"
+          >
+            --
+          </div>
+
+          <span class="indicator-desc">
+            Existing operational players in the block
+          </span>
+
+        </div>
+
+
+        <div class="indicator-card">
+
+          <span class="indicator-title">
+            Initial Risk Level
+          </span>
+
+          <div
+            id="indicator-risk"
+            class="indicator-value"
+          >
+            --
+          </div>
+
+          <span class="indicator-desc">
+            Downside vulnerability and margin sensitivity
+          </span>
+
+        </div>
+
+
+        <div class="indicator-card">
+
+          <span class="indicator-title">
+            Price Potential
+          </span>
+
+          <div
+            id="indicator-price"
+            class="indicator-value"
+          >
+            --
+          </div>
+
+          <span class="indicator-desc">
+            Pricing power &amp; margin expansion room
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <div class="nav-actions">
+
+        <button
+          type="button"
+          class="btn btn-secondary"
+          onclick="goToScreen(2)"
+        >
+          &larr; Edit Inputs
+        </button>
+
+        <button
+          type="button"
+          class="btn btn-primary"
+          onclick="goToScreen(4)"
+        >
+          Proceed to Market Analysis &rarr;
+        </button>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =======================================================
+         SCREEN 4
+         MARKET
+         ======================================================= -->
+
+    <section
+      id="screen-4"
+      class="step-screen hidden-step"
+    >
+
+      <div class="screen-header">
+
+        <span class="step-indicator">
+          Screen 4 of 14
+        </span>
+
+        <h2>
+          Market Scope &amp; Target Demographics
+        </h2>
+
+        <p class="section-subtitle">
+          Understanding who buys, geographic footprint,
+          and local distribution pipelines.
+        </p>
+
+      </div>
+
+
+      <div class="analysis-grid">
+
+
+        <div class="analysis-card">
+
+          <div class="analysis-icon">
+            🎯
+          </div>
+
+          <h3>
+            Who Can Buy Your Product
+          </h3>
+
+          <p
+            id="market-audience"
+            class="analysis-text"
+          >
+            Loading target audience...
+          </p>
+
+        </div>
+
+
+        <div class="analysis-card">
+
+          <div class="analysis-icon">
+            📍
+          </div>
+
+          <h3>
+            Estimated Market Reach
+          </h3>
+
+          <p
+            id="market-reach"
+            class="analysis-text"
+          >
+            Loading geographic reach...
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="split-detail-card">
+
+        <div class="detail-block">
+
+          <span class="detail-label">
+            Customer Segments
+          </span>
+
+          <p
+            id="market-segments"
+            class="detail-value"
+          >
+            Loading segments...
+          </p>
+
+        </div>
+
+
+        <hr class="detail-divider" />
+
+
+        <div class="detail-block">
+
+          <span class="detail-label">
+            Distribution Channels
+          </span>
+
+          <p
+            id="market-channels"
+            class="detail-value"
+          >
+            Loading delivery channels...
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="nav-actions">
+
+        <button
+          type="button"
+          class="btn btn-secondary"
+          onclick="goToScreen(3)"
+        >
+          &larr; Back to Dashboard
+        </button>
+
+        <button
+          type="button"
+          class="btn btn-primary"
+          onclick="goToScreen(5)"
+        >
+          Proceed to Opportunity Analysis &rarr;
+        </button>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =======================================================
+         SCREEN 5
+         OPPORTUNITY
+         ======================================================= -->
+
+    <section
+      id="screen-5"
+      class="step-screen hidden-step"
+    >
+
+      <div class="screen-header">
+
+        <span class="step-indicator">
+          Screen 5 of 14
+        </span>
+
+        <h2>
+          Growth &amp; Opportunity Analysis
+        </h2>
+
+        <p class="section-subtitle">
+          Identified value-addition pathways and market upside potential.
+        </p>
+
+      </div>
+
+
+      <div class="opportunity-header-card">
+
+        <div>
+
+          <span class="score-label">
+            Expansion Viability
+          </span>
+
+          <h3 class="opportunity-heading">
+            Identified Market Potential
+          </h3>
+
+        </div>
+
+
+        <span
+          id="opp-level-badge"
+          class="badge-opp badge-opp-green"
+        >
+          High
+        </span>
+
+      </div>
+
+
+      <div class="form-section">
+
+        <legend>
+          Strategic Expansion Pathways
+        </legend>
+
+        <ul
+          id="opp-items-list"
+          class="opportunity-list"
+        ></ul>
+
+      </div>
+
+
+      <div class="nav-actions">
+
+        <button
+          type="button"
+          class="btn btn-secondary"
+          onclick="goToScreen(4)"
+        >
+          &larr; Back to Market Analysis
+        </button>
+
+        <button
+          type="button"
+          class="btn btn-primary"
+          onclick="goToScreen(6)"
+        >
+          Proceed to Competitor Analysis &rarr;
+        </button>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =======================================================
+         SCREEN 6
+         COMPETITORS
+         ======================================================= -->
+
+    <section
+      id="screen-6"
+      class="step-screen hidden-step"
+    >
+
+      <div class="screen-header">
+
+        <span class="step-indicator">
+          Screen 6 of 14
+        </span>
+
+        <h2>
+          Competitor &amp; Industry Landscape
+        </h2>
+
+        <p class="section-subtitle">
+          Evaluate local market saturation, incumbent players,
+          and positioning advantages.
+        </p>
+
+      </div>
+
+
+      <div class="opportunity-header-card">
+
+        <div>
+
+          <span class="score-label">
+            Market Density
+          </span>
+
+          <h3 class="opportunity-heading">
+            Competitive Saturation
+          </h3>
+
+        </div>
+
+
+        <span
+          id="comp-level-badge"
+          class="badge-opp badge-opp-blue"
+        >
+          Medium
+        </span>
+
+      </div>
+
+
+      <div class="split-detail-card">
+
+        <div class="detail-block">
+
+          <span class="detail-label">
+            Existing Market Players
+          </span>
+
+          <p
+            id="comp-players"
+            class="detail-value"
+          >
+            Loading competitor profile...
+          </p>
+
+        </div>
+
+
+        <hr class="detail-divider" />
+
+
+        <div class="detail-block">
+
+          <span class="detail-label">
+            Key Market Insights &amp; Positioning Advice
+          </span>
+
+          <p
+            id="comp-insights"
+            class="detail-value"
+          >
+            Loading positioning insights...
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="nav-actions">
+
+        <button
+          type="button"
+          class="btn btn-secondary"
+          onclick="goToScreen(5)"
+        >
+          &larr; Back to Opportunities
+        </button>
+
+        <button
+          type="button"
+          class="btn btn-primary"
+          onclick="goToScreen(7)"
+        >
+          Proceed to SWOT Analysis &rarr;
+        </button>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =======================================================
+         SCREEN 7
+         SWOT
+         ======================================================= -->
+
+    <section
+      id="screen-7"
+      class="step-screen hidden-step"
+    >
+
+      <div class="screen-header">
+
+        <span class="step-indicator">
+          Screen 7 of 14
+        </span>
+
+        <h2>
+          Strategic SWOT Analysis
+        </h2>
+
+        <p class="section-subtitle">
+          Evaluating internal advantages and external hazards
+          for this enterprise model.
+        </p>
+
+      </div>
+
+
+      <div class="swot-grid">
+
+
+        <article class="swot-card swot-strengths">
+
+          <div class="swot-header">
+
+            <span class="swot-badge">
+              S
+            </span>
+
+            <h3>
+              Strengths
+            </h3>
+
+          </div>
+
+          <ul
+            id="swot-strengths-list"
+            class="swot-list"
+          ></ul>
+
+        </article>
+
+
+        <article class="swot-card swot-weaknesses">
+
+          <div class="swot-header">
+
+            <span class="swot-badge">
+              W
+            </span>
+
+            <h3>
+              Weaknesses
+            </h3>
+
+          </div>
+
+          <ul
+            id="swot-weaknesses-list"
+            class="swot-list"
+          ></ul>
+
+        </article>
+
+
+        <article class="swot-card swot-opportunities">
+
+          <div class="swot-header">
+
+            <span class="swot-badge">
+              O
+            </span>
+
+            <h3>
+              Opportunities
+            </h3>
+
+          </div>
+
+          <ul
+            id="swot-opportunities-list"
+            class="swot-list"
+          ></ul>
+
+        </article>
+
+
+        <article class="swot-card swot-threats">
+
+          <div class="swot-header">
+
+            <span class="swot-badge">
+              T
+            </span>
+
+            <h3>
+              Threats
+            </h3>
+
+          </div>
+
+          <ul
+            id="swot-threats-list"
+            class="swot-list"
+          ></ul>
+
+        </article>
+
+      </div>
+
+
+      <div class="nav-actions">
+
+        <button
+          type="button"
+          class="btn btn-secondary"
+          onclick="goToScreen(6)"
+        >
+          &larr; Back to Competitors
+        </button>
+
+        <button
+          type="button"
+          class="btn btn-primary"
+          onclick="goToScreen(8)"
+        >
+          Proceed to Operational Threats &rarr;
+        </button>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =======================================================
+         SCREEN 8
+         THREATS
+         ======================================================= -->
+
+    <section
+      id="screen-8"
+      class="step-screen hidden-step"
+    >
+
+      <div class="screen-header">
+
+        <span class="step-indicator">
+          Screen 8 of 14
+        </span>
+
+        <h2>
+          Operational Risk &amp; Threat Matrix
+        </h2>
+
+        <p class="section-subtitle">
+          Examine structural vulnerabilities, seasonal swings,
+          and supply chain constraints.
+        </p>
+
+      </div>
+
+
+      <div
+        id="risk-callout-card"
+        class="risk-callout-card"
+      >
+
+        <div>
+
+          <span class="score-label">
+            Downside Exposure
+          </span>
+
+          <h3 class="opportunity-heading">
+            Overall Operational Risk
+          </h3>
+
+        </div>
+
+
+        <span
+          id="risk-level-badge"
+          class="badge-opp badge-opp-red"
+        >
+          Medium Risk
+        </span>
+
+      </div>
+
+
+      <div class="risk-matrix">
+
+
+        <div class="risk-row">
+
+          <div class="risk-cell-header">
+
+            <span class="risk-icon">
+              ⛓️
+            </span>
+
+            <strong>
+              Supply Chain Bottlenecks
+            </strong>
+
+          </div>
+
+          <div
+            id="threat-bottlenecks"
+            class="risk-cell-content"
+          >
+            Loading bottlenecks...
+          </div>
+
+        </div>
+
+
+        <div class="risk-row">
+
+          <div class="risk-cell-header">
+
+            <span class="risk-icon">
+              📅
+            </span>
+
+            <strong>
+              Seasonal Demand Fluctuation
+            </strong>
+
+          </div>
+
+          <div
+            id="threat-seasonality"
+            class="risk-cell-content"
+          >
+            Loading seasonality...
+          </div>
+
+        </div>
+
+
+        <div class="risk-row">
+
+          <div class="risk-cell-header">
+
+            <span class="risk-icon">
+              📈
+            </span>
+
+            <strong>
+              Raw Material Price Changes
+            </strong>
+
+          </div>
+
+          <div
+            id="threat-raw-material"
+            class="risk-cell-content"
+          >
+            Loading material volatility...
+          </div>
+
+        </div>
+
+
+        <div class="risk-row">
+
+          <div class="risk-cell-header">
+
+            <span class="risk-icon">
+              🤝
+            </span>
+
+            <strong>
+              Single Buyer Dependency
+            </strong>
+
+          </div>
+
+          <div
+            id="threat-buyer-risk"
+            class="risk-cell-content"
+          >
+            Loading buyer dependency...
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="nav-actions">
+
+        <button
+          type="button"
+          class="btn btn-secondary"
+          onclick="goToScreen(7)"
+        >
+          &larr; Back to SWOT
+        </button>
+
+        <button
+          type="button"
+          class="btn btn-primary"
+          onclick="goToScreen(9)"
+        >
+          Proceed to Pricing Strategy &rarr;
+        </button>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =======================================================
+         SCREEN 9
+         PRICING
+         ======================================================= -->
+
+    <section
+      id="screen-9"
+      class="step-screen hidden-step"
+    >
+
+      <div class="screen-header">
+
+        <span class="step-indicator">
+          Screen 9 of 14
+        </span>
+
+        <h2>
+          Pricing Model &amp; Value Proposition
+        </h2>
+
+        <p class="section-subtitle">
+          Align revenue capture with local purchasing capacity
+          and competitive differentiation.
+        </p>
+
+      </div>
+
+
+      <div class="analysis-grid">
+
+
+        <div class="analysis-card">
+
+          <div class="analysis-icon">
+            👛
+          </div>
+
+          <h3>
+            Local Purchasing Power
+          </h3>
+
+          <p
+            id="pricing-power"
+            class="analysis-text"
+          >
+            Loading purchasing power insights...
+          </p>
+
+        </div>
+
+
+        <div class="analysis-card">
+
+          <div class="analysis-icon">
+            🏷️
+          </div>
+
+          <h3>
+            Recommended Pricing Strategy
+          </h3>
+
+          <p
+            id="pricing-strategy"
+            class="analysis-text"
+          >
+            Loading recommended strategy...
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="value-prop-card">
+
+        <span class="detail-label">
+          Core Value Proposition Statement
+        </span>
+
+        <blockquote
+          id="pricing-value-prop"
+          class="value-prop-quote"
+        >
+          Loading value proposition...
+        </blockquote>
+
+      </div>
+
+
+      <div class="nav-actions">
+
+        <button
+          type="button"
+          class="btn btn-secondary"
+          onclick="goToScreen(8)"
+        >
+          &larr; Back to Threat Analysis
+        </button>
+
+        <button
+          type="button"
+          class="btn btn-primary"
+          onclick="goToScreen(10)"
+        >
+          Proceed to Financial Calculator &rarr;
+        </button>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =======================================================
+         SCREEN 10
+         FINANCIAL CALCULATOR
+         ======================================================= -->
+
+    <section
+      id="screen-10"
+      class="step-screen hidden-step"
+    >
+
+      <div class="screen-header">
+
+        <span class="step-indicator">
+          Screen 10 of 14
+        </span>
+
+        <h2>
+          Financial Calculator
+        </h2>
+
+        <p class="section-subtitle">
+          Estimate monthly repayment requirements and evaluate
+          whether the proposed business can support the financing burden.
+        </p>
+
+      </div>
+
+
+      <div class="form-section">
+
+        <legend>
+          Loan &amp; Cash Flow Inputs
+        </legend>
+
+        <div class="form-grid">
+
+
+          <!-- LOAN -->
+
+          <div class="form-group">
+
+            <label for="loan-amount">
+              Loan Amount
+            </label>
+
+            <div class="input-currency-wrapper">
+
+              <span class="currency-symbol">
+                ₹
+              </span>
+
+              <input
+                type="number"
+                id="loan-amount"
+                placeholder="100000"
+                min="0"
+                step="1000"
+              />
+
+            </div>
+
+          </div>
+
+
+          <!-- INTEREST -->
+
+          <div class="form-group">
+
+            <label for="interest-rate">
+              Annual Interest Rate (%)
+            </label>
+
+            <input
+              type="number"
+              id="interest-rate"
+              placeholder="12"
+              min="0"
+              step="0.1"
+            />
+
+          </div>
+
+
+          <!-- TENURE -->
+
+          <div class="form-group">
+
+            <label for="loan-tenure">
+              Loan Tenure (Months)
+            </label>
+
+            <input
+              type="number"
+              id="loan-tenure"
+              placeholder="36"
+              min="1"
+              step="1"
+            />
+
+          </div>
+
+
+          <!-- MONTHLY PROFIT -->
+
+          <div class="form-group">
+
+            <label for="monthly-profit">
+              Expected Monthly Business Surplus
+            </label>
+
+            <div class="input-currency-wrapper">
+
+              <span class="currency-symbol">
+                ₹
+              </span>
+
+              <input
+                type="number"
+                id="monthly-profit"
+                placeholder="15000"
+                min="0"
+                step="500"
+              />
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="cta-wrapper">
+
+        <button
+          type="button"
+          id="calculate-finance-btn"
+          class="btn btn-primary cta-btn"
+        >
+          Calculate Financial Feasibility &rarr;
+        </button>
+
+      </div>
+
+
+      <div
+        id="financial-results"
+        class="financial-results"
+      >
+
+
+        <div class="indicator-card">
+
+          <span class="indicator-title">
+            Estimated Monthly EMI
+          </span>
+
+          <div
+            id="financial-emi"
+            class="indicator-value"
+          >
+            --
+          </div>
+
+          <span class="indicator-desc">
+            Estimated monthly loan repayment
+          </span>
+
+        </div>
+
+
+        <div class="indicator-card">
+
+          <span class="indicator-title">
+            Debt Burden
+          </span>
+
+          <div
+            id="financial-debt-burden"
+            class="indicator-value"
+          >
+            --
+          </div>
+
+          <span class="indicator-desc">
+            EMI compared with expected monthly surplus
+          </span>
+
+        </div>
+
+
+        <div class="indicator-card">
+
+          <span class="indicator-title">
+            Repayment Capacity
+          </span>
+
+          <div
+            id="financial-repayment-capacity"
+            class="indicator-value"
+          >
+            --
+          </div>
+
+          <span class="indicator-desc">
+            Ability to absorb monthly repayment
+          </span>
+
+        </div>
+
+
+        <div class="indicator-card">
+
+          <span class="indicator-title">
+            Financial Status
+          </span>
+
+          <div
+            id="financial-status"
+            class="indicator-value"
+          >
+            --
+          </div>
+
+          <span class="indicator-desc">
+            Indicative financing recommendation
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <div
+        id="financial-advice-card"
+        class="value-prop-card"
+      >
+
+        <span class="detail-label">
+          Financial Assessment
+        </span>
+
+        <blockquote
+          id="financial-advice"
+          class="value-prop-quote"
+        >
+          Complete the calculator to see your financial assessment.
+        </blockquote>
+
+      </div>
+
+
+      <div class="nav-actions">
+
+        <button
+          type="button"
+          class="btn btn-secondary"
+          onclick="goToScreen(9)"
+        >
+          &larr; Back to Pricing
+        </button>
+
+        <button
+          type="button"
+          class="btn btn-primary"
+          onclick="goToScreen(11)"
+        >
+          Proceed to Government Schemes &rarr;
+        </button>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =======================================================
+         SCREEN 11
+         GOVERNMENT SCHEME RECOMMENDATIONS
+         ======================================================= -->
+
+    <section
+      id="screen-11"
+      class="step-screen hidden-step"
+    >
+
+      <div class="screen-header">
+
+        <span class="step-indicator">
+          Screen 11 of 14
+        </span>
+
+        <h2>
+          Government Scheme Recommendations
+        </h2>
+
+        <p class="section-subtitle">
+
+          Matching your evaluated loan requirement
+          (<strong id="scheme-loan-target">₹0</strong>)
+          with subsidized credit windows and lending benchmarks.
+
+        </p>
+
+      </div>
+
+
+      <div
+        id="schemes-container"
+        class="schemes-grid"
+      >
+      </div>
+
+
+      <div class="nav-actions">
+
+        <button
+          type="button"
+          class="btn btn-secondary"
+          onclick="goToScreen(10)"
+        >
+          &larr; Back to Calculator
+        </button>
+
+        <button
+          type="button"
+          id="confirm-scheme-btn"
+          class="btn btn-primary"
+          onclick="proceedToScreen12()"
+        >
+          Proceed with Selected Scheme &rarr;
+        </button>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =======================================================
+         SCREEN 12
+         INTERACTIVE EMI CALCULATOR
+         ======================================================= -->
+
+    <section
+      id="screen-12"
+      class="step-screen hidden-step"
+    >
+
+      <div class="screen-header">
+
+        <span class="step-indicator">
+          Screen 12 of 14
+        </span>
+
+        <h2>
+          Loan Repayment &amp; EMI Calculator
+        </h2>
+
+        <p class="section-subtitle">
+          Fine-tune loan parameters to test debt service capacity
+          against your monthly cash flow.
+        </p>
+
+      </div>
+
+
+      <!-- ACTIVE SCHEME SUMMARY -->
+
+      <div class="scheme-active-banner">
+
+        <span class="detail-label">
+          Active Scheme Configuration
+        </span>
+
+        <div class="banner-content">
+
+          <strong id="emi-active-scheme-name">
+            PMMY Mudra Loan
+          </strong>
+
+          <span
+            id="emi-moratorium-note"
+            class="moratorium-pill"
+          >
+            Moratorium: 1 Month
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <!-- EMI HERO CARD -->
+
+      <div class="emi-hero-card">
+
+        <div class="emi-hero-main">
+
+          <span class="score-label">
+            Estimated Monthly Installment
+          </span>
+
+          <div class="emi-amount-display">
+
+            <span
+              id="display-monthly-emi"
+              class="emi-number"
+            >
+              ₹0
+            </span>
+
+            <span class="emi-freq">
+              / month
+            </span>
+
+          </div>
+
+          <span class="field-hint">
+            Equated Monthly Installment on reducing balance
+          </span>
+
+        </div>
+
+
+        <div class="emi-totals-grid">
+
+          <div class="emi-total-item">
+
+            <span class="spec-label">
+              Principal Amount
+            </span>
+
+            <span
+              id="display-total-principal"
+              class="spec-val"
+            >
+              ₹0
+            </span>
+
+          </div>
+
+
+          <div class="emi-total-item">
+
+            <span class="spec-label">
+              Total Interest Payable
+            </span>
+
+            <span
+              id="display-total-interest"
+              class="spec-val text-amber"
+            >
+              ₹0
+            </span>
+
+          </div>
+
+
+          <div class="emi-total-item">
+
+            <span class="spec-label">
+              Total Debt Service
+            </span>
+
+            <span
+              id="display-total-payment"
+              class="spec-val text-primary"
+            >
+              ₹0
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- PARAMETER ADJUSTMENT -->
+
+      <div class="form-section">
+
+        <legend>
+          Loan Parameter Tuning
+        </legend>
+
+
+        <!-- LOAN PRINCIPAL -->
+
+        <div class="form-group">
+
+          <div class="control-label-row">
+
+            <label for="emi-principal-input">
+              Loan Principal (₹)
+            </label>
+
+            <span
+              id="principal-badge"
+              class="highlight-pill"
+            >
+              ₹0
+            </span>
+
+          </div>
+
+          <input
+            type="number"
+            id="emi-principal-input"
+            min="1000"
+            max="10000000"
+            step="5000"
+            class="calculator-input"
+          />
+
+        </div>
+
+
+        <!-- INTEREST RATE -->
+
+        <div class="form-group">
+
+          <div class="control-label-row">
+
+            <label for="emi-rate-slider">
+              Annual Interest Rate (% p.a.)
+            </label>
+
+            <span
+              id="rate-badge"
+              class="highlight-pill"
+            >
+              9.50%
+            </span>
+
+          </div>
+
+          <input
+            type="range"
+            id="emi-rate-slider"
+            min="7.0"
+            max="16.0"
+            step="0.25"
+            value="9.5"
+            class="range-slider"
+          />
+
+          <div class="slider-range-labels">
+
+            <span>
+              7.0% (Subsidized)
+            </span>
+
+            <span>
+              10.0% (Standard Mudra)
+            </span>
+
+            <span>
+              13.0%
+            </span>
+
+            <span>
+              16.0% (NBFC/MFI)
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <!-- TENURE -->
+
+        <div class="form-group">
+
+          <label>
+            Repayment Tenure
+          </label>
+
+          <div
+            class="tenure-chips-group"
+            id="tenure-chips-container"
+          >
+
+            <button
+              type="button"
+              class="chip-btn"
+              data-months="24"
+              onclick="selectTenure(24)"
+            >
+              24 Months (2 Yrs)
+            </button>
+
+            <button
+              type="button"
+              class="chip-btn"
+              data-months="36"
+              onclick="selectTenure(36)"
+            >
+              36 Months (3 Yrs)
+            </button>
+
+            <button
+              type="button"
+              class="chip-btn"
+              data-months="48"
+              onclick="selectTenure(48)"
+            >
+              48 Months (4 Yrs)
+            </button>
+
+            <button
+              type="button"
+              class="chip-btn"
+              data-months="60"
+              onclick="selectTenure(60)"
+            >
+              60 Months (5 Yrs)
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- NAVIGATION -->
+
+      <div class="nav-actions">
+
+        <button
+          type="button"
+          class="btn btn-secondary"
+          onclick="goToScreen(11)"
+        >
+          &larr; Back to Schemes
+        </button>
+
+        <button
+          type="button"
+          class="btn btn-primary"
+          onclick="goToScreen(13)"
+        >
+          View Repayment Schedule &rarr;
+        </button>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =======================================================
+         SCREEN 13
+         REPAYMENT & AMORTIZATION SCHEDULE
+         ======================================================= -->
+
+    <section
+      id="screen-13"
+      class="step-screen hidden-step"
+    >
+
+      <div class="screen-header">
+
+        <span class="step-indicator">
+          Screen 13 of 14
+        </span>
+
+        <h2>
+          Amortization &amp; Repayment Schedule
+        </h2>
+
+        <p class="section-subtitle">
+          Track debt retirement, principal drawdown, and
+          interest service over the loan lifecycle.
+        </p>
+
+      </div>
+
+
+      <!-- MORATORIUM NOTICE -->
+
+      <div
+        id="moratorium-notice-banner"
+        class="moratorium-alert-card hidden-step"
+      >
+
+        <div class="alert-icon">
+          ℹ️
+        </div>
+
+        <div>
+
+          <strong>
+            Moratorium Period Active:
+          </strong>
+
+          <span id="moratorium-notice-text">
+            Principal repayments commence after a grace period.
+            Interest treatment depends on the selected repayment structure.
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <!-- SCHEDULE CONTROLS -->
+
+      <div class="schedule-controls-bar">
+
+        <div class="schedule-meta-summary">
+
+          <span>
+
+            Total Installments:
+
+            <strong id="sched-tenure-text">
+              0 Months
+            </strong>
+
+          </span>
+
+          <span class="meta-divider">
+            •
+          </span>
+
+          <span>
+
+            Effective Rate:
+
+            <strong id="sched-rate-text">
+              0%
+            </strong>
+
+          </span>
+
+        </div>
+
+
+        <div class="view-toggle-group">
+
+          <button
+            type="button"
+            id="toggle-monthly-btn"
+            class="view-toggle-btn active-toggle"
+            onclick="switchScheduleView('monthly')"
+          >
+            Monthly View
+          </button>
+
+          <button
+            type="button"
+            id="toggle-quarterly-btn"
+            class="view-toggle-btn"
+            onclick="switchScheduleView('quarterly')"
+          >
+            Quarterly View
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <!-- RESPONSIVE AMORTIZATION TABLE -->
+
+      <div class="table-responsive">
+
+        <table
+          class="amortization-table"
+          id="amortization-table"
+        >
+
+          <thead>
+
+            <tr>
+
+              <th id="th-period-label">
+                Month
+              </th>
+
+              <th>
+                Opening Balance
+              </th>
+
+              <th>
+                Principal Paid
+              </th>
+
+              <th>
+                Interest Paid
+              </th>
+
+              <th>
+                Total Payment
+              </th>
+
+              <th>
+                Closing Balance
+              </th>
+
+            </tr>
+
+          </thead>
+
+
+          <tbody
+            id="amortization-tbody"
+          >
+          </tbody>
+
+
+          <tfoot
+            id="amortization-tfoot"
+          >
+          </tfoot>
+
+        </table>
+
+      </div>
+
+
+      <!-- NAVIGATION -->
+
+      <div class="nav-actions">
+
+        <button
+          type="button"
+          class="btn btn-secondary"
+          onclick="goToScreen(12)"
+        >
+          &larr; Back to EMI Calculator
+        </button>
+
+        <button
+          type="button"
+          class="btn btn-primary cta-btn"
+          onclick="goToScreen(14)"
+        >
+          Generate Final Business Report &rarr;
+        </button>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =======================================================
+         SCREEN 14
+         FINAL BUSINESS ASSESSMENT REPORT
+         MILESTONE 4 — STEP 1 + STEP 2
+         ======================================================= -->
+
+    <section
+      id="screen-14"
+      class="step-screen hidden-step"
+    >
+
+
+      <!-- =====================================================
+           REPORT HEADER
+           ===================================================== -->
+
+      <header class="report-meta-card">
+
+        <div class="report-meta-header">
+
+          <div>
+
+            <span class="report-badge">
+              Official Assessment Dossier
+            </span>
+
+            <h2
+              id="report-enterprise-title"
+              class="report-title"
+            >
+              Business Feasibility Report
+            </h2>
+
+            <p
+              id="report-location-subtitle"
+              class="report-subtitle"
+            >
+              Geographic Scope: Unspecified |
+              Target Sector: Rural Micro-Enterprise
+            </p>
+
+          </div>
+
+
+          <div class="report-id-box">
+
+            <span class="report-id-label">
+              Reference ID
+            </span>
+
+            <strong
+              id="report-ref-id"
+              class="report-id-value"
+            >
+              RBA-2026-XXXX
+            </strong>
+
+            <span
+              id="report-date-stamp"
+              class="report-date"
+            >
+              Generated: --
+            </span>
+
+          </div>
+
+        </div>
+
+      </header>
+
+
+
+      <!-- =====================================================
+           EXECUTIVE SUMMARY
+           ===================================================== -->
+
+      <section
+        class="report-section report-summary-card"
+      >
+
+        <div class="report-score-block">
+
+          <span class="score-label">
+            Enterprise Viability Index
+          </span>
+
+          <div class="score-display">
+
+            <span
+              id="report-score-number"
+              class="score-number"
+            >
+              --
+            </span>
+
+            <span class="score-max">
+              / 100
+            </span>
+
+          </div>
+
+          <span
+            id="report-score-badge"
+            class="status-badge"
+          >
+            Evaluating
+          </span>
+
+        </div>
+
+
+        <div class="report-pills-block">
+
+          <h3 class="subsection-title-sm">
+            Market Health Indicators
+          </h3>
+
+
+          <div class="pills-grid">
+
+
+            <div class="metric-pill">
+
+              <span class="pill-label">
+                Demand Density
+              </span>
+
+              <strong
+                id="report-pill-demand"
+                class="pill-val"
+              >
+                --
+              </strong>
+
+            </div>
+
+
+            <div class="metric-pill">
+
+              <span class="pill-label">
+                Competition
+              </span>
+
+              <strong
+                id="report-pill-competition"
+                class="pill-val"
+              >
+                --
+              </strong>
+
+            </div>
+
+
+            <div class="metric-pill">
+
+              <span class="pill-label">
+                Risk Profile
+              </span>
+
+              <strong
+                id="report-pill-risk"
+                class="pill-val"
+              >
+                --
+              </strong>
+
+            </div>
+
+
+            <div class="metric-pill">
+
+              <span class="pill-label">
+                Pricing Power
+              </span>
+
+              <strong
+                id="report-pill-pricing"
+                class="pill-val"
+              >
+                --
+              </strong>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+
+      <!-- =====================================================
+           CAPITAL + CREDIT STRUCTURE
+           ===================================================== -->
+
+      <div class="report-grid-duo">
+
+
+        <!-- PROJECT CAPITALIZATION -->
+
+        <article class="report-card">
+
+          <h3 class="report-card-heading">
+
+            <span class="card-icon">
+              💼
+            </span>
+
+            Project Capitalization
+
+          </h3>
+
+
+          <div class="data-spec-list">
+
+
+            <div class="data-spec-row">
+
+              <span class="spec-term">
+                Total Project Cost
+              </span>
+
+              <strong
+                id="report-project-cost"
+                class="spec-data"
+              >
+                ₹0
+              </strong>
+
+            </div>
+
+
+            <div class="data-spec-row">
+
+              <span class="spec-term">
+                Promoter Margin Invested
+              </span>
+
+              <strong
+                id="report-margin-invested"
+                class="spec-data text-amber"
+              >
+                ₹0
+              </strong>
+
+            </div>
+
+
+            <div class="data-spec-row highlight-row">
+
+              <span class="spec-term">
+                Recommended Loan Sanction
+              </span>
+
+              <strong
+                id="report-loan-sanction"
+                class="spec-data text-primary"
+              >
+                ₹0
+              </strong>
+
+            </div>
+
+
+            <div class="data-spec-row">
+
+              <span class="spec-term">
+                Promoter Equity Share
+              </span>
+
+              <span
+                id="report-equity-ratio"
+                class="spec-data"
+              >
+                10% Margin / 90% Debt
+              </span>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- CREDIT STRUCTURE -->
+
+        <article class="report-card">
+
+          <h3 class="report-card-heading">
+
+            <span class="card-icon">
+              📜
+            </span>
+
+            Credit &amp; Debt Structuring
+
+          </h3>
+
+
+          <div class="data-spec-list">
+
+
+            <div class="data-spec-row">
+
+              <span class="spec-term">
+                Aligned Scheme
+              </span>
+
+              <strong
+                id="report-scheme-name"
+                class="spec-data"
+              >
+                PMMY Mudra
+              </strong>
+
+            </div>
+
+
+            <div class="data-spec-row">
+
+              <span class="spec-term">
+                Benchmark Interest Rate
+              </span>
+
+              <strong
+                id="report-interest-rate"
+                class="spec-data"
+              >
+                9.50% p.a.
+              </strong>
+
+            </div>
+
+
+            <div class="data-spec-row">
+
+              <span class="spec-term">
+                Repayment Tenure
+              </span>
+
+              <span
+                id="report-tenure-months"
+                class="spec-data"
+              >
+                36 Months
+              </span>
+
+            </div>
+
+
+            <div class="data-spec-row highlight-row">
+
+              <span class="spec-term">
+                Projected Monthly EMI
+              </span>
+
+              <strong
+                id="report-monthly-emi"
+                class="spec-data text-primary"
+              >
+                ₹0 / month
+              </strong>
+
+            </div>
+
+          </div>
+
+        </article>
+
+      </div>
+
+
+
+      <!-- =====================================================
+           STRATEGIC & OPERATIONAL DIGEST
+           ===================================================== -->
+
+      <article
+        class="report-card report-digest-card"
+      >
+
+        <h3 class="report-card-heading">
+
+          <span class="card-icon">
+            🧭
+          </span>
+
+          Strategic &amp; Operational Digest
+
+        </h3>
+
+
+        <div class="digest-grid">
+
+
+          <!-- SWOT -->
+
+          <div>
+
+            <h4 class="digest-subheading">
+              Core SWOT Highlights
+            </h4>
+
+            <ul
+              id="report-swot-bullets"
+              class="digest-list"
+            >
+
+              <!-- Dynamically populated -->
+
+            </ul>
+
+          </div>
+
+
+          <!-- RISK MITIGATION -->
+
+          <div>
+
+            <h4 class="digest-subheading">
+              Operational Risk Mitigation Tip
+            </h4>
+
+            <div
+              id="report-risk-mitigation-box"
+              class="mitigation-box"
+            >
+              Assessment-based mitigation advice
+              will appear here.
+            </div>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- =====================================================
+           FINANCIAL VERIFICATION
+           ===================================================== -->
+
+      <div
+        id="final-test-summary"
+        class="value-prop-card"
+      >
+
+        <span class="detail-label">
+          Financial Verification
+        </span>
+
+        <blockquote
+          id="final-test-message"
+          class="value-prop-quote"
+        >
+          Financial calculations have been reconciled
+          against the configured repayment schedule.
+        </blockquote>
+
+      </div>
+
+
+
+      <!-- =====================================================
+           RECOMMENDATION & ACTION PLAN
+           MILESTONE 4 — STEP 2
+           ===================================================== -->
+
+      <article
+        id="report-advisory-card"
+        class="report-card advisory-card"
+      >
+
+        <div class="advisory-header">
+
+          <div class="advisory-title-group">
+
+            <span
+              id="advisory-status-badge"
+              class="status-badge"
+            >
+              Recommendation
+            </span>
+
+            <h3 class="report-card-heading">
+              Strategic Advisory &amp;
+              Next-Step Action Plan
+            </h3>
+
+          </div>
+
+
+          <span
+            id="advisory-tier-pill"
+            class="tier-pill"
+          >
+            Tier Evaluation
+          </span>
+
+        </div>
+
+
+        <!-- DYNAMIC RECOMMENDATION -->
+
+        <div
+          id="advisory-callout"
+          class="advisory-callout"
+        >
+
+          <p
+            id="advisory-recommendation-text"
+            class="advisory-text"
+          >
+            Loading recommendation...
+          </p>
+
+        </div>
+
+
+        <!-- ACTION PLAN -->
+
+        <div class="action-plan-wrapper">
+
+          <h4
+            id="action-plan-title"
+            class="digest-subheading"
+          >
+            Recommended Next Steps
+          </h4>
+
+
+          <ul
+            id="action-plan-checklist"
+            class="action-checklist"
+          >
+
+            <!-- Dynamic checklist items inserted by app.js -->
+
+          </ul>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- =====================================================
+           SCREEN 14 NAVIGATION
+           ===================================================== -->
+
+        <!-- =====================================================
+     SCREEN 14 BOTTOM ACTIONS
+     ===================================================== -->
+
+<div class="nav-actions report-bottom-nav no-print">
+
+  <button
+    type="button"
+    class="btn btn-secondary"
+    onclick="goToScreen(13)"
+  >
+    &larr; Back to Schedule
+  </button>
+
+  <div class="report-primary-actions">
+
+    <button
+      type="button"
+      class="btn btn-secondary btn-reset"
+      onclick="confirmAndResetAssessment()"
+    >
+      🔄 Start New Assessment
+    </button>
+
+    <button
+      type="button"
+      class="btn btn-primary btn-print"
+      onclick="printReport()"
+    >
+      🖨️ Download / Print Report
+    </button>
+
+  </div>
+
+</div>
+
+
+    </section>
+
+
+  </main>
+
+
+
+  <!-- =========================================================
+       JAVASCRIPT
+       IMPORTANT ORDER
+       ========================================================= -->
+
+  <script src="strategies.js"></script>
+
+  <script src="app.js"></script>
+
+
+</body>
+
+</html>
